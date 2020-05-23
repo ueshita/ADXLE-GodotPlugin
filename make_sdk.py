@@ -1,7 +1,8 @@
 import os
 import shutil
 
-shutil.rmtree("cri-godot")
+if os.path.isdir("cri-godot"):
+    shutil.rmtree("cri-godot")
 os.mkdir("cri-godot")
 os.mkdir("cri-godot/include")
 os.mkdir("cri-godot/libs")
