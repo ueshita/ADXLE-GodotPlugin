@@ -1,0 +1,7 @@
+[gd_resource type="GDNativeLibrary" format=2]
+
+[resource]
+entry/Windows.64 = "res://addons/adx2le/bin/win64/libadx2le_godot.64.dll"
+dependency/Windows.64 = [ "res://addons/adx2le/bin/win64/cri_ware_pcx64_le.dll" ]
+entry/Windows.32 = "res://addons/adx2le/bin/win32/libadx2le_godot.32.dll"
+dependency/Windows.32 = [ "res://addons/adx2le/bin/win32/cri_ware_pcx86_le.dll" ]

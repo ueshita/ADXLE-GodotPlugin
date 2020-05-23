@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{6047e1af-f757-41de-b730-1646e90cec3f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\GDLibrary.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\CriAtomExPlayer.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\CriAtomExAcb.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\CriWareFileIo.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\CriAtomExCategory.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\CriAtomExVoicePool.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\CriAtomEx3dSource.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\CriAtomEx3dListener.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\CriAtomExContext.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\CriAtomExPlayer.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\CriAtomExAcb.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\CriWareFileIo.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GDLibrary.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\CriAtomExCategory.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\CriAtomExVoicePool.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\CriAtomEx3dSource.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\CriAtomEx3dListener.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\CriAtomExContext.h">
+      <Filter>src</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

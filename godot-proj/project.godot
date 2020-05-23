@@ -1,0 +1,37 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "Object",
+"class": "CriAtomEx",
+"language": "GDScript",
+"path": "res://addons/adx2le/src/CriAtomEx.gd"
+} ]
+_global_script_class_icons={
+"CriAtomEx": ""
+}
+
+[application]
+
+config/name="ADX2LE Demo"
+run/main_scene="res://Main.tscn"
+config/icon="res://icon.png"
+
+[autoload]
+
+AudioMgr="*res://AudioMgr.gd"
+
+[editor_plugins]
+
+enabled=PoolStringArray(  )
+
+[rendering]
+
+environment/default_environment="res://default_env.tres"
