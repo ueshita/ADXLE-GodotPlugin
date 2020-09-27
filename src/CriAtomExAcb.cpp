@@ -58,11 +58,11 @@ Variant CriAtomExAcb::get_all_cue_infos()
 		criAtomExAcb_GetCueInfoByIndex(this->handle, index, &info);
 		
 		Dictionary dic;
-		dic["id"] = info.id;
-		dic["type"] = info.type;
+		dic["id"] = (int32_t)info.id;
+		dic["type"] = (int32_t)info.type;
 		dic["name"] = info.name;
 		dic["user_data"] = info.user_data;
-		dic["length"] = info.length;
+		dic["length"] = (int64_t)info.length;
 		cue_list.append(dic);
 	}
 

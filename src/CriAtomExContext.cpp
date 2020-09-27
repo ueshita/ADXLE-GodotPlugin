@@ -58,11 +58,19 @@ void CriAtomExContext::initialize(String acf_file, Dictionary config)
 	criFs_SetSelectIoCallback(CriWareFileIo::SelectIo);
 
 	// Initialize AtomEx library
+#if defined(XPT_TGT_PC)
 	CriAtomExConfig_WASAPI lib_config;
 	criAtomEx_SetDefaultConfig_WASAPI(&lib_config);
 	if (config.has("max_virtual_voices"))
 		lib_config.atom_ex.max_virtual_voices = (int)config["max_virtual_voices"];
 	criAtomEx_Initialize_WASAPI(&lib_config, nullptr, 0);
+#elif defined(XPT_TGT_ANDROID)
+	CriAtomExConfig_ANDROID lib_config;
+	criAtomEx_SetDefaultConfig_ANDROID(&lib_config);
+	if (config.has("max_virtual_voices"))
+		lib_config.atom_ex.max_virtual_voices = (int)config["max_virtual_voices"];
+	criAtomEx_Initialize_ANDROID(&lib_config, nullptr, 0);
+#endif
 	this->is_initialized = true;
 
 	// Register config file
@@ -95,7 +103,11 @@ void CriAtomExContext::finalize()
 	}
 
 	// Finalize ADX2 library
+#if defined(XPT_TGT_PC)
 	criAtomEx_Finalize_WASAPI();
+#elif defined(XPT_TGT_ANDROID)
+	criAtomEx_Finalize_ANDROID();
+#endif
 
 	criAtomEx_SetUserAllocator(nullptr, nullptr, nullptr);
 }
