@@ -3,6 +3,7 @@ import os
 import shutil
 import subprocess
 import multiprocessing
+import glob
 
 script_path = os.path.abspath(__file__)
 
@@ -21,7 +22,7 @@ job_opt = " -j" + str(multiprocessing.cpu_count())
 
 if "platform=windows" in sys.argv:
     os.makedirs("godot-proj/addons/adxle/bin/windows", exist_ok=True)
-    shutil.copy2("cri/pc/libs/x64/cri_ware_pcx64_le.dll", "godot-proj/addons/adxle/bin/windows/")
+    shutil.copy2("cri/pc/libs/x64/cri_ware_pcx64_le.dll", "godot-proj/addons/adxle/bin/windows/cri_ware_pcx64_le.dll")
 
     # subprocess.run("scons platform=windows bits=32 target=release" + job_opt, shell = True)
     subprocess.run("scons platform=windows bits=64 target=release" + job_opt, shell = True)
@@ -42,18 +43,19 @@ elif "platform=macos" in sys.argv:
     shutil.copy2("bin/libadxle.macos.dylib", "godot-proj/addons/adxle/bin/macos/")
 
 elif "platform=android" in sys.argv:
-    os.makedirs("godot-proj/addons/adxle/bin/android", exist_ok=True)
-    shutil.copytree("cri/android/libs", "godot-proj/addons/adxle/bin/android", dirs_exist_ok=True)
+    for arch in ["arm64-v8a", "armeabi-v7a", "x86_64"]:
+        os.makedirs(f"godot-proj/addons/adxle/bin/android/{arch}", exist_ok=True)
+        shutil.copy2(f"cri/android/libs/{arch}/libcri_ware_android_LE.so", f"godot-proj/addons/adxle/bin/android/{arch}/libcri_ware_android_le.so")
 
-    subprocess.run("scons platform=android android_arch=armv7 target=release" + job_opt, shell = True)
-    subprocess.run("scons platform=android android_arch=arm64v8 target=release" + job_opt, shell = True)
+    subprocess.run("scons platform=android android_arch=armeabi-v7a target=release" + job_opt, shell = True)
+    subprocess.run("scons platform=android android_arch=arm64-v8a target=release" + job_opt, shell = True)
     subprocess.run("scons platform=android android_arch=x86_64 target=release" + job_opt, shell = True)
 
     os.makedirs("godot-proj/addons/adxle/bin/android", exist_ok = True)
 
-    shutil.copy2("bin/libadxle.android.armv7.so", "godot-proj/addons/adxle/bin/android/armeabi-v7a/")
-    shutil.copy2("bin/libadxle.android.arm64v8.so", "godot-proj/addons/adxle/bin/android/arm64-v8a/")
-    shutil.copy2("bin/libadxle.android.x86_64.so", "godot-proj/addons/adxle/bin/android/x86_64/")
+    shutil.copy2("bin/libadxle.android.armeabi-v7a.so", "godot-proj/addons/adxle/bin/android/armeabi-v7a/libadxle.android.so")
+    shutil.copy2("bin/libadxle.android.arm64-v8a.so", "godot-proj/addons/adxle/bin/android/arm64-v8a/libadxle.android.so")
+    shutil.copy2("bin/libadxle.android.x86_64.so", "godot-proj/addons/adxle/bin/android/x86_64/libadxle.android.so")
 
 elif "platform=ios" in sys.argv:
     os.makedirs("godot-proj/addons/adxle/bin/ios", exist_ok=True)

@@ -113,14 +113,14 @@ opts.Add(BoolVariable(
 opts.Add(EnumVariable(
     "android_arch",
     "Target Android architecture",
-    "armv7",
-    ["armv7","arm64v8","x86","x86_64"]
+    "armeabi-v7a",
+    ["armeabi-v7a","arm64-v8a","x86_64"]
 ))
 opts.Add(EnumVariable(
     "ios_arch",
     "Target iOS architecture",
     "arm64",
-    ["armv7", "arm64", "x86_64"]
+    ["arm64", "x86_64"]
 ))
 opts.Add(
     "XCODEPATH",
@@ -130,7 +130,7 @@ opts.Add(
 opts.Add(
     "android_api_level",
     "Target Android API level",
-    "19" if ARGUMENTS.get("android_arch", "armv7") in ["armv7", "x86"] else "21"
+    "19" if ARGUMENTS.get("android_arch", "armeabi-v7a") in ["armeabi-v7a", "x86"] else "21"
 )
 opts.Add(
     "ANDROID_NDK_ROOT",
@@ -315,7 +315,7 @@ elif env["platform"] == "android":
 
     # Get architecture info
     arch_info_table = {
-        "armv7" : {
+        "armeabi-v7a" : {
             "march":"armv7-a",
             "target":"armv7a-linux-androideabi", 
             "tool_path":"arm-linux-androideabi",
@@ -323,7 +323,7 @@ elif env["platform"] == "android":
             "sysroot_path":"arch-arm",
             "ccflags" : ["-mfpu=neon"]
             },
-        "arm64v8" : {
+        "arm64-v8a" : {
             "march":"armv8-a",
             "target":"aarch64-linux-android", 
             "tool_path":"aarch64-linux-android",
