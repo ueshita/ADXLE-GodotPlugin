@@ -40,6 +40,8 @@ void CriAtomExPlayer::_register_methods()
 	register_method("set_fadeout_time", &CriAtomExPlayer::set_fadeout_time);
 	register_method("is_fading", &CriAtomExPlayer::is_fading);
 	register_method("reset_fader_parameters", &CriAtomExPlayer::reset_fader_parameters);
+	register_method("set_3d_source", &CriAtomExPlayer::set_3d_source);
+	register_method("set_3d_listener", &CriAtomExPlayer::set_3d_listener);
 }
 
 CriAtomExPlayer::CriAtomExPlayer()

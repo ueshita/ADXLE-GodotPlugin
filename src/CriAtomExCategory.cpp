@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "GDLibrary.h"
 #include "CriAtomExCategory.h"
 

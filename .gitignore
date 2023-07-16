@@ -1,11 +1,14 @@
 # Prerequisites
 *.d
+*.dblite
+*.user
 
 # Compiled Object files
 *.slo
 *.lo
 *.o
 *.obj
+*.os
 
 # Precompiled Headers
 *.gch
@@ -31,6 +34,11 @@
 *.out
 *.app
 
-
+# Project
 /cri/*
-/cri-godot/*
+/bin/
+/x64/
+/Win32/
+
+.vs/
+.import/

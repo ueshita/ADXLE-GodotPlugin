@@ -6,18 +6,21 @@ onready var status_label := $TabWindow/Playback/Split/Playback/PlayStatus
 onready var status_strings := CriAtomEx.PlayerStatus.keys()
 
 func _ready():
-	var cues = AudioMgr.acb.get_all_cue_infos()
-	for cue in cues:
-		cue_dropdown.add_item(cue.name, cue.id)
+	var index = 0
+	for acb in AudioMgr.acbs:
+		var cues = acb.get_all_cue_infos()
+		for cue in cues:
+			cue_dropdown.add_item(cue.name, index)
+			index += 1
 
 
-func _process(delta: float):
+func _process(_delta: float):
 	status_label.text = "Status: %s  Time: %d" % [status_strings[AudioMgr.player.get_status()], AudioMgr.player.get_time()]
 
 
 func _on_play_button_down():
-	var id = cue_dropdown.get_selected_id()
-	AudioMgr.play(id);
+	var cue_name = cue_dropdown.get_item_text(cue_dropdown.get_selected_id())
+	AudioMgr.play(cue_name)
 
 
 func _on_stop_button_down():
