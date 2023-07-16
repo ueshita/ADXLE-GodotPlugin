@@ -193,7 +193,7 @@ if env["platform"] == "linux":
         env.Append(CCFLAGS=["-m32"])
         env.Append(LINKFLAGS=["-m32"])
 
-    target_path = "libadx2le." + env["TARGET_ARCH"] + ".so"
+    target_path = "libadxle." + env["TARGET_ARCH"] + ".so"
 
 elif env["platform"] == "macos":
     if env["bits"] == "32":
@@ -233,7 +233,7 @@ elif env["platform"] == "macos":
     elif env["target"] == "release":
         env.Append(CCFLAGS=["-Ofast"])
 
-    target_path = "libadx2le.macos.dylib"
+    target_path = "libadxle.macos.dylib"
 
 elif env["platform"] == "ios":
     if env["ios_arch"] == "x86_64":
@@ -273,7 +273,7 @@ elif env["platform"] == "ios":
     elif env["target"] == "release":
         env.Append(CCFLAGS=["-Ofast"])
 
-    target_path = "libadx2le.ios." + env["ios_arch"] + ".dylib"
+    target_path = "libadxle.ios." + env["ios_arch"] + ".dylib"
 
 elif env["platform"] == "windows":
     # MSVC
@@ -283,7 +283,7 @@ elif env["platform"] == "windows":
     elif env["target"] == "release":
         env.Append(CCFLAGS=["/std:c++17", "/O2", "/EHsc", "/DNDEBUG", "/MT"])
 
-    target_path = "libadx2le.win" + env["bits"] + ".dll"
+    target_path = "libadxle.win" + env["bits"] + ".dll"
     
 elif env["platform"] == "android":
     if host_platform == "windows":
@@ -349,7 +349,7 @@ elif env["platform"] == "android":
         }
     }
     arch_info = arch_info_table[env["android_arch"]]
-    target_path = "libadx2le.android." + env["android_arch"] + ".so"
+    target_path = "libadxle.android." + env["android_arch"] + ".so"
     
     # Setup tools
     env["CC"] = toolchain + "/bin/clang"
@@ -377,7 +377,7 @@ elif env["platform"] == "html5":
     if not "EMSDK" in env:
         raise ValueError("To build for HTML5, EMSDK must be defined. Please set EMSDK to the root folder of your Emscripten SDK installation.")
 
-    target_path = "libadx2le.wasm" + "32" + ".wasm"
+    target_path = "libadxle.wasm" + "32" + ".wasm"
 
     # Setup tools
     env["ENV"] = os.environ
@@ -424,7 +424,7 @@ sources = []
 add_sources(sources, 'godot-cpp/src/core', 'cpp')
 add_sources(sources, 'godot-cpp/src/gen', 'cpp')
 
-## adx2le godot plugin
+## adxle godot plugin
 add_sources(sources, "src", "cpp")
 
 

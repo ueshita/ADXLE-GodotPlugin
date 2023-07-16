@@ -1,12 +1,12 @@
 extends Node
 
-onready var CriAtomExContext = preload("res://addons/adx2le/src/CriAtomExContext.gdns")
-onready var CriAtomExVoicePool = preload("res://addons/adx2le/src/CriAtomExVoicePool.gdns")
-onready var CriAtomExAcb = preload("res://addons/adx2le/src/CriAtomExAcb.gdns")
-onready var CriAtomExPlayer = preload("res://addons/adx2le/src/CriAtomExPlayer.gdns")
-onready var CriAtomEx3dSource = preload("res://addons/adx2le/src/CriAtomEx3dSource.gdns")
-onready var CriAtomEx3dListener = preload("res://addons/adx2le/src/CriAtomEx3dListener.gdns")
-onready var CriAtomExCategory = preload("res://addons/adx2le/src/CriAtomExCategory.gdns")
+onready var CriAtomExContext = preload("res://addons/adxle/src/CriAtomExContext.gdns")
+onready var CriAtomExVoicePool = preload("res://addons/adxle/src/CriAtomExVoicePool.gdns")
+onready var CriAtomExAcb = preload("res://addons/adxle/src/CriAtomExAcb.gdns")
+onready var CriAtomExPlayer = preload("res://addons/adxle/src/CriAtomExPlayer.gdns")
+onready var CriAtomEx3dSource = preload("res://addons/adxle/src/CriAtomEx3dSource.gdns")
+onready var CriAtomEx3dListener = preload("res://addons/adxle/src/CriAtomEx3dListener.gdns")
+onready var CriAtomExCategory = preload("res://addons/adxle/src/CriAtomExCategory.gdns")
 
 var ACF_FILE = "res://sound/ADX2_samples.acf"
 var ACB_FILES = [

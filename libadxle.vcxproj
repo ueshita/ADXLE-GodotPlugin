@@ -754,7 +754,7 @@
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>aria</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
-    <ProjectName>libadx2le</ProjectName>
+    <ProjectName>libadxle</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -843,7 +843,7 @@
       <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
     </Link>
     <PostBuildEvent>
-      <Command>copy $(TargetPath) $(SolutionDir)godot-proj\addons\adx2le\bin\windows\</Command>
+      <Command>copy $(TargetPath) $(SolutionDir)godot-proj\addons\adxle\bin\windows\</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -868,7 +868,7 @@
       <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
     </Link>
     <PostBuildEvent>
-      <Command>copy $(TargetPath) $(SolutionDir)godot-proj\addons\adx2le\bin\windows\</Command>
+      <Command>copy $(TargetPath) $(SolutionDir)godot-proj\addons\adxle\bin\windows\</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -897,7 +897,7 @@
       <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
     </Link>
     <PostBuildEvent>
-      <Command>copy $(TargetPath) $(SolutionDir)godot-proj\addons\adx2le\bin\windows\</Command>
+      <Command>copy $(TargetPath) $(SolutionDir)godot-proj\addons\adxle\bin\windows\</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -926,7 +926,7 @@
       <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
     </Link>
     <PostBuildEvent>
-      <Command>copy $(TargetPath) $(SolutionDir)godot-proj\addons\adx2le\bin\windows\</Command>
+      <Command>copy $(TargetPath) $(SolutionDir)godot-proj\addons\adxle\bin\windows\</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

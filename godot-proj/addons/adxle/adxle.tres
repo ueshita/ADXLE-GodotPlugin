@@ -1,0 +1,6 @@
+[gd_resource type="GDNativeLibrary" format=2]
+
+[resource]
+reloadable = false
+entry/Windows.64 = "res://addons/adxle/bin/windows/libadxle.win64.dll"
+dependency/Windows.64 = [ "res://addons/adxle/bin/windows/cri_ware_pcx64_le.dll" ]

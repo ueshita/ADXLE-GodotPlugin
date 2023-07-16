@@ -1,6 +1,6 @@
 [gd_resource type="NativeScript" load_steps=2 format=2]
 
-[ext_resource path="res://addons/adx2le/adx2le.tres" type="GDNativeLibrary" id=1]
+[ext_resource path="res://addons/adxle/adxle.tres" type="GDNativeLibrary" id=1]
 
 [resource]
 resource_name = "CriAtomExPlayer"

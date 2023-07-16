@@ -12,7 +12,7 @@ _global_script_classes=[ {
 "base": "Object",
 "class": "CriAtomEx",
 "language": "GDScript",
-"path": "res://addons/adx2le/src/CriAtomEx.gd"
+"path": "res://addons/adxle/src/CriAtomEx.gd"
 } ]
 _global_script_class_icons={
 "CriAtomEx": ""
@@ -20,7 +20,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="ADX2LE Demo"
+config/name="ADXLE Demo"
 run/main_scene="res://Main.tscn"
 config/icon="res://icon.png"
 
