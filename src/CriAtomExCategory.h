@@ -1,15 +1,15 @@
 #pragma once
 
-#include <Godot.hpp>
 #include <cri_adx2le.h>
+#include "GDLibrary.h"
 
 namespace godot {
 
-class CriAtomExCategory : public Reference
+class CriAtomExCategory : public RefCounted
 {
-    GODOT_CLASS(CriAtomExCategory, Reference)
+    GDCLASS(CriAtomExCategory, RefCounted)
 public:
-    static void _register_methods();
+    static void _bind_methods();
 
 	CriAtomExCategory();
     ~CriAtomExCategory();

@@ -1,7 +1,7 @@
 #pragma once
 
-#include <Godot.hpp>
 #include <cri_adx2le.h>
+#include "GDLibrary.h"
 
 namespace godot {
 
@@ -9,17 +9,17 @@ class CriAtomExAcb;
 class CriAtomEx3dSource;
 class CriAtomEx3dListener;
 
-class CriAtomExPlayer : public Reference
+class CriAtomExPlayer : public RefCounted
 {
-    GODOT_CLASS(CriAtomExPlayer, Reference)
-public:
-    static void _register_methods();
+    GDCLASS(CriAtomExPlayer, RefCounted)
 
+public:
+    static void _bind_methods();
+
+public:
 	CriAtomExPlayer();
 
     ~CriAtomExPlayer();
-
-	void _init();
 
 	void create(Dictionary config);
 

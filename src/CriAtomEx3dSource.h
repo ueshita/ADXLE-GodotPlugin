@@ -1,16 +1,16 @@
 #pragma once
 
-#include <Godot.hpp>
 #include <cri_adx2le.h>
+#include "GDLibrary.h"
 #include "CriAtomExAcb.h"
 
 namespace godot {
 
-class CriAtomEx3dSource : public Reference
+class CriAtomEx3dSource : public RefCounted
 {
-    GODOT_CLASS(CriAtomEx3dSource, Reference)
+    GDCLASS(CriAtomEx3dSource, RefCounted)
 public:
-    static void _register_methods();
+    static void _bind_methods();
 
 	CriAtomEx3dSource();
 

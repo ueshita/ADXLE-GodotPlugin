@@ -6,42 +6,41 @@
 
 namespace godot {
 
-void CriAtomExPlayer::_register_methods()
+void CriAtomExPlayer::_bind_methods()
 {
-	register_method("_init", &CriAtomExPlayer::_init);
-	register_method("create", &CriAtomExPlayer::create);
-	register_method("destroy", &CriAtomExPlayer::destroy);
-	register_method("set_cue_name", &CriAtomExPlayer::set_cue_name);
-	register_method("set_cue_id", &CriAtomExPlayer::set_cue_id);
-	register_method("set_cue_index", &CriAtomExPlayer::set_cue_index);
-	register_method("start", &CriAtomExPlayer::start);
-	register_method("stop", &CriAtomExPlayer::stop);
-	register_method("stop_without_release_time", &CriAtomExPlayer::stop_without_release_time);
-	register_method("set_start_time", &CriAtomExPlayer::set_start_time);
-	register_method("pause", &CriAtomExPlayer::pause);
-	register_method("is_paused", &CriAtomExPlayer::is_paused);
-	register_method("get_status", &CriAtomExPlayer::get_status);
-	register_method("get_time", &CriAtomExPlayer::get_time);
-	register_method("set_volume", &CriAtomExPlayer::set_volume);
-	register_method("set_pitch", &CriAtomExPlayer::set_pitch);
-	register_method("set_pan3d_angle", &CriAtomExPlayer::set_pan3d_angle);
-	register_method("set_pan3d_interior_distance", &CriAtomExPlayer::set_pan3d_interior_distance);
-	register_method("set_aisac_control_by_name", &CriAtomExPlayer::set_aisac_control_by_name);
-	register_method("set_aisac_control_by_id", &CriAtomExPlayer::set_aisac_control_by_id);
-	register_method("reset_parameters", &CriAtomExPlayer::reset_parameters);
-	register_method("update", &CriAtomExPlayer::update);
-	register_method("update_all", &CriAtomExPlayer::update_all);
-	register_method("set_first_block_index", &CriAtomExPlayer::set_first_block_index);
-	register_method("set_selector_label", &CriAtomExPlayer::set_selector_label);
-	register_method("clear_selector_labels", &CriAtomExPlayer::clear_selector_labels);
-	register_method("attach_fader", &CriAtomExPlayer::attach_fader);
-	register_method("detach_fader", &CriAtomExPlayer::detach_fader);
-	register_method("set_fadein_time", &CriAtomExPlayer::set_fadein_time);
-	register_method("set_fadeout_time", &CriAtomExPlayer::set_fadeout_time);
-	register_method("is_fading", &CriAtomExPlayer::is_fading);
-	register_method("reset_fader_parameters", &CriAtomExPlayer::reset_fader_parameters);
-	register_method("set_3d_source", &CriAtomExPlayer::set_3d_source);
-	register_method("set_3d_listener", &CriAtomExPlayer::set_3d_listener);
+	GDBIND_METHOD(CriAtomExPlayer, create, "config");
+	GDBIND_METHOD(CriAtomExPlayer, destroy);
+	GDBIND_METHOD(CriAtomExPlayer, set_cue_name, "acb", "cue_name");
+	GDBIND_METHOD(CriAtomExPlayer, set_cue_id, "acb", "cue_id");
+	GDBIND_METHOD(CriAtomExPlayer, set_cue_index, "acb", "cue_index");
+	GDBIND_METHOD(CriAtomExPlayer, start);
+	GDBIND_METHOD(CriAtomExPlayer, stop);
+	GDBIND_METHOD(CriAtomExPlayer, stop_without_release_time);
+	GDBIND_METHOD(CriAtomExPlayer, set_start_time, "start_time");
+	GDBIND_METHOD(CriAtomExPlayer, pause, "paused");
+	GDBIND_METHOD(CriAtomExPlayer, is_paused);
+	GDBIND_METHOD(CriAtomExPlayer, get_status);
+	GDBIND_METHOD(CriAtomExPlayer, get_time);
+	GDBIND_METHOD(CriAtomExPlayer, set_volume, "volume");
+	GDBIND_METHOD(CriAtomExPlayer, set_pitch, "pitch");
+	GDBIND_METHOD(CriAtomExPlayer, set_pan3d_angle, "pan3d_angle");
+	GDBIND_METHOD(CriAtomExPlayer, set_pan3d_interior_distance, "pan3d_distance");
+	GDBIND_METHOD(CriAtomExPlayer, set_aisac_control_by_name, "aisac_name", "aisac_value");
+	GDBIND_METHOD(CriAtomExPlayer, set_aisac_control_by_id, "aisac_id", "aisac_value");
+	GDBIND_METHOD(CriAtomExPlayer, reset_parameters);
+	GDBIND_METHOD(CriAtomExPlayer, update);
+	GDBIND_METHOD(CriAtomExPlayer, update_all);
+	GDBIND_METHOD(CriAtomExPlayer, set_first_block_index, "block_index");
+	GDBIND_METHOD(CriAtomExPlayer, set_selector_label, "selector", "label");
+	GDBIND_METHOD(CriAtomExPlayer, clear_selector_labels);
+	GDBIND_METHOD(CriAtomExPlayer, attach_fader);
+	GDBIND_METHOD(CriAtomExPlayer, detach_fader);
+	GDBIND_METHOD(CriAtomExPlayer, set_fadein_time, "fade_time");
+	GDBIND_METHOD(CriAtomExPlayer, set_fadeout_time, "fade_time");
+	GDBIND_METHOD(CriAtomExPlayer, is_fading);
+	GDBIND_METHOD(CriAtomExPlayer, reset_fader_parameters);
+	GDBIND_METHOD(CriAtomExPlayer, set_3d_source, "source");
+	GDBIND_METHOD(CriAtomExPlayer, set_3d_listener, "listener");
 }
 
 CriAtomExPlayer::CriAtomExPlayer()
@@ -51,10 +50,6 @@ CriAtomExPlayer::CriAtomExPlayer()
 CriAtomExPlayer::~CriAtomExPlayer()
 {
 	destroy();
-}
-
-void CriAtomExPlayer::_init()
-{
 }
 
 void CriAtomExPlayer::create(Dictionary config)
@@ -92,9 +87,9 @@ void CriAtomExPlayer::destroy()
 	}
 }
 
-void CriAtomExPlayer::set_cue_name(Ref<CriAtomExAcb> acb, String cue)
+void CriAtomExPlayer::set_cue_name(Ref<CriAtomExAcb> acb, String cue_name)
 {
-	criAtomExPlayer_SetCueName(handle, acb.is_valid() ? acb->get_handle() : nullptr, FixedString<256>(String(cue)).str);
+	criAtomExPlayer_SetCueName(handle, acb.is_valid() ? acb->get_handle() : nullptr, cue_name.utf8().get_data());
 }
 
 void CriAtomExPlayer::set_cue_id(Ref<CriAtomExAcb> acb, int cue_id)
@@ -169,7 +164,7 @@ void CriAtomExPlayer::set_pan3d_interior_distance(float pan3d_interior_distance)
 
 void CriAtomExPlayer::set_aisac_control_by_name(String control_name, float value)
 {
-	criAtomExPlayer_SetAisacControlByName(handle, FixedString<256>(String(control_name)).str, value);
+	criAtomExPlayer_SetAisacControlByName(handle, control_name.utf8().get_data(), value);
 }
 
 void CriAtomExPlayer::set_aisac_control_by_id(int control_id, float value)
@@ -199,7 +194,7 @@ void CriAtomExPlayer::set_first_block_index(int32_t block_index)
 
 void CriAtomExPlayer::set_selector_label(String selector, String label)
 {
-	criAtomExPlayer_SetSelectorLabel(handle, FixedString<128>(selector).str, FixedString<128>(label).str);
+	criAtomExPlayer_SetSelectorLabel(handle, selector.utf8().get_data(), label.utf8().get_data());
 }
 
 void CriAtomExPlayer::clear_selector_labels()

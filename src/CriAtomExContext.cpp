@@ -4,7 +4,7 @@
 
 namespace godot {
 
-void CriAtomExContext::_register_methods()
+void CriAtomExContext::_bind_methods()
 {
 	register_method("_init", &CriAtomExContext::_init);
 	register_method("initialize", &CriAtomExContext::initialize);

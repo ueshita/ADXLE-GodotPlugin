@@ -3,14 +3,13 @@
 
 namespace godot {
 
-void CriAtomExVoicePool::_register_methods()
+void CriAtomExVoicePool::_bind_methods()
 {
-	register_method("_init", &CriAtomExVoicePool::_init);
-	register_method("allocate_standard_voice_pool", &CriAtomExVoicePool::allocate_standard_voice_pool);
-	register_method("allocate_hcamx_voice_pool", &CriAtomExVoicePool::allocate_hcamx_voice_pool);
-	register_method("free_voice_pool", &CriAtomExVoicePool::free_voice_pool);
-	register_method("get_num_used_voices", &CriAtomExVoicePool::get_num_used_voices);
-	register_method("get_num_limit_voices", &CriAtomExVoicePool::get_num_limit_voices);
+	GDBIND_METHOD(CriAtomExVoicePool, allocate_standard_voice_pool, "config");
+	GDBIND_METHOD(CriAtomExVoicePool, allocate_hcamx_voice_pool, "config");
+	GDBIND_METHOD(CriAtomExVoicePool, free_voice_pool);
+	GDBIND_METHOD(CriAtomExVoicePool, get_num_used_voices);
+	GDBIND_METHOD(CriAtomExVoicePool, get_num_limit_voices);
 }
 
 CriAtomExVoicePool::CriAtomExVoicePool()
@@ -20,10 +19,6 @@ CriAtomExVoicePool::CriAtomExVoicePool()
 CriAtomExVoicePool::~CriAtomExVoicePool()
 {
 	free_voice_pool();
-}
-
-void CriAtomExVoicePool::_init()
-{
 }
 
 void CriAtomExVoicePool::allocate_standard_voice_pool(Dictionary config)

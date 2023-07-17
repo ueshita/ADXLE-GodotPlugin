@@ -1,20 +1,20 @@
 #pragma once
 
-#include <Godot.hpp>
 #include <cri_adx2le.h>
+#include "GDLibrary.h"
 
 namespace godot {
 
-class CriAtomExVoicePool : public Reference
+class CriAtomExVoicePool : public RefCounted
 {
-    GODOT_CLASS(CriAtomExVoicePool, Reference)
-public:
-    static void _register_methods();
+    GDCLASS(CriAtomExVoicePool, RefCounted)
 
+public:
+    static void _bind_methods();
+
+public:
 	CriAtomExVoicePool();
     ~CriAtomExVoicePool();
-
-	void _init();
 
 	void allocate_standard_voice_pool(Dictionary config);
 

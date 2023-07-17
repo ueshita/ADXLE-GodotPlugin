@@ -3,7 +3,7 @@
 
 namespace godot {
 
-void CriAtomExAcb::_register_methods()
+void CriAtomExAcb::_bind_methods()
 {
 	register_method("_init", &CriAtomExAcb::_init);
 	register_method("load_acb_file", &CriAtomExAcb::load_acb_file);
@@ -28,8 +28,8 @@ bool CriAtomExAcb::load_acb_file(String acb_path, String awb_path)
 {
 	release();
 
-	this->handle = criAtomExAcb_LoadAcbFile(nullptr, FixedString<1024>(acb_path).str, 
-		nullptr, FixedString<1024>(awb_path).str, nullptr, 0);
+	this->handle = criAtomExAcb_LoadAcbFile(nullptr, acb_path.utf8().get_data(), 
+		nullptr, awb_path.utf8().get_data(), nullptr, 0);
 	return (this->handle != nullptr);
 }
 

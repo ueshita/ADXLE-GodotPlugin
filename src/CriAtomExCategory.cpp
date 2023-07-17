@@ -4,7 +4,7 @@
 
 namespace godot {
 
-void CriAtomExCategory::_register_methods()
+void CriAtomExCategory::_bind_methods()
 {
 	register_method("_init", &CriAtomExCategory::_init);
 	register_method("set_name", &CriAtomExCategory::set_name);

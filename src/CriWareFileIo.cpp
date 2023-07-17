@@ -26,7 +26,7 @@
 #include <assert.h>
 
 /* Godot Engine関連ヘッダ */
-#include <File.hpp>
+#include <godot_cpp/classes/file_access.hpp>
 
 /***************************************************************************
  * 定数マクロ定義
@@ -45,7 +45,7 @@
 /* ファイルハンドル */
 struct CriWareFile
 {
-	godot::Ref<godot::File> FileHandle;	/* ネイティブファイルハンドル	*/
+	godot::Ref<godot::FileAccess> FileHandle;	/* ネイティブファイルハンドル	*/
 	int64_t FileSize = 0;				/* ファイルサイズ				*/
 	int64_t ReadSize = 0;				/* 最終読み込みサイズ			*/
 	int64_t WriteSize = 0;				/* 最終書き込みサイズ			*/
@@ -155,8 +155,7 @@ CriFsIoError CriWareFile::Exists(const CriChar8 *Filename, CriBool *OutResult)
 
 	/* ファイルの有無をチェック */
 	/* Check whether the file exists */
-	godot::Ref<godot::File> FileHandle(godot::File::_new());
-	if (FileHandle->file_exists(path)) {
+	if (godot::FileAccess::file_exists(path)) {
 		(*OutResult) = CRI_TRUE;
 	} else {
 		(*OutResult) = CRI_FALSE;
@@ -205,25 +204,25 @@ CriFsIoError CriWareFile::Open(const CriChar8 *Filename,
 	if (File == NULL) {
 		return (CRIFS_IO_ERROR_NG);
 	}
-	File->FileHandle.instance();
+	
 
 	/* ファイルのオープン */
 	/* Open a file */
 	godot::Error error = godot::Error::OK;
 	if (Access == CRIFS_FILE_ACCESS_READ) {
-		error = File->FileHandle->open(path, godot::File::READ);
+		File->FileHandle = godot::FileAccess::open(path, godot::FileAccess::READ);
 	} else {
-		error = File->FileHandle->open(path, godot::File::WRITE);
+		File->FileHandle = godot::FileAccess::open(path, godot::FileAccess::WRITE);
 	}
 
-	if (error != godot::Error::OK) {
+	if (!File->FileHandle.is_valid()) {
 		delete File;
 		return (CRIFS_IO_ERROR_NG);
 	}
 
 	/* ファイルサイズの取得 */
 	/* Get the file size */
-	File->FileSize = File->FileHandle->get_len();
+	File->FileSize = File->FileHandle->get_length();
 
 	/* ハンドルの保存 */
 	/* Store the file handle */
@@ -312,7 +311,7 @@ CriFsIoError CriWareFile::Read(CriFsFileHn InFile,
 	/* データの読み込み */
 	/* Read data */
 	auto ByteArray = File->FileHandle->get_buffer(ReadSize);
-	memcpy(Buffer, ByteArray.read().ptr(), ReadSize);
+	memcpy(Buffer, ByteArray.ptr(), ReadSize);
 
 	/* 読み込みサイズの保存 */
 	/* Store the read size */
@@ -388,9 +387,9 @@ CriFsIoError CriWareFile::Write(CriFsFileHn InFile,
 
 	/* データの書き込み */
 	/* Write data */
-	godot::PoolByteArray ByteArray;
+	godot::PackedByteArray ByteArray;
 	ByteArray.resize(WriteSize);
-	memcpy(ByteArray.write().ptr(), Buffer, WriteSize);
+	memcpy(ByteArray.ptrw(), Buffer, WriteSize);
 	File->FileHandle->store_buffer(ByteArray);
 
 	/* 書き込みサイズの保存 */

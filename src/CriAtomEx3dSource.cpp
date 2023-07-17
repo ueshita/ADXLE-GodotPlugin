@@ -3,7 +3,7 @@
 
 namespace godot {
 
-void CriAtomEx3dSource::_register_methods()
+void CriAtomEx3dSource::_bind_methods()
 {
 	register_method("_init", &CriAtomEx3dSource::_init);
 	register_method("create", &CriAtomEx3dSource::create);

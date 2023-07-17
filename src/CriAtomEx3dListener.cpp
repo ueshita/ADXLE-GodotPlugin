@@ -3,7 +3,7 @@
 
 namespace godot {
 
-void CriAtomEx3dListener::_register_methods()
+void CriAtomEx3dListener::_bind_methods()
 {
 	register_method("_init", &CriAtomEx3dListener::_init);
 	register_method("create", &CriAtomEx3dListener::create);

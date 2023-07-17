@@ -421,8 +421,13 @@ json_api_file = ""
 sources = []
 
 ## godot-cpp bindings
+add_sources(sources, 'godot-cpp/src', 'cpp')
+add_sources(sources, 'godot-cpp/src/classes', 'cpp')
 add_sources(sources, 'godot-cpp/src/core', 'cpp')
-add_sources(sources, 'godot-cpp/src/gen', 'cpp')
+add_sources(sources, 'godot-cpp/src/variant', 'cpp')
+add_sources(sources, 'godot-cpp/gen/src', 'cpp')
+add_sources(sources, 'godot-cpp/gen/src/classes', 'cpp')
+add_sources(sources, 'godot-cpp/gen/src/variant', 'cpp')
 
 ## adxle godot plugin
 add_sources(sources, "src", "cpp")
@@ -460,9 +465,9 @@ elif env["platform"] == "android":
 
 env.Append(CPPPATH=[".", 
     godot_headers_path, 
+    godot_cpp_path + "gdextension/", 
     godot_cpp_path + "include/", 
-    godot_cpp_path + "include/core/", 
-    godot_cpp_path + "include/gen/",
+    godot_cpp_path + "gen/include/",
     cri_headers_path,
 ])
 
