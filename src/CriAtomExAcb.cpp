@@ -5,10 +5,9 @@ namespace godot {
 
 void CriAtomExAcb::_bind_methods()
 {
-	register_method("_init", &CriAtomExAcb::_init);
-	register_method("load_acb_file", &CriAtomExAcb::load_acb_file);
-	register_method("release", &CriAtomExAcb::release);
-	register_method("get_all_cue_infos", &CriAtomExAcb::get_all_cue_infos);
+	GDBIND_STATIC_METHOD(CriAtomExAcb, load_acb_file, "acb_path", "awb_path");
+	GDBIND_METHOD(CriAtomExAcb, release);
+	GDBIND_METHOD(CriAtomExAcb, get_all_cue_infos);
 }
 
 CriAtomExAcb::CriAtomExAcb()
@@ -20,17 +19,17 @@ CriAtomExAcb::~CriAtomExAcb()
 	release();
 }
 
-void CriAtomExAcb::_init()
+Ref<CriAtomExAcb> CriAtomExAcb::load_acb_file(String acb_path, String awb_path)
 {
-}
-
-bool CriAtomExAcb::load_acb_file(String acb_path, String awb_path)
-{
-	release();
-
-	this->handle = criAtomExAcb_LoadAcbFile(nullptr, acb_path.utf8().get_data(), 
+	auto handle = criAtomExAcb_LoadAcbFile(nullptr, acb_path.utf8().get_data(), 
 		nullptr, awb_path.utf8().get_data(), nullptr, 0);
-	return (this->handle != nullptr);
+	if (handle == nullptr) {
+		return nullptr;
+	}
+
+	Ref<CriAtomExAcb> acb = memnew(CriAtomExAcb);
+	acb->handle = handle;
+	return acb;
 }
 
 void CriAtomExAcb::release()

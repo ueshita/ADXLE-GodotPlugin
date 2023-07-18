@@ -5,8 +5,8 @@ namespace godot {
 
 void CriAtomExVoicePool::_bind_methods()
 {
-	GDBIND_METHOD(CriAtomExVoicePool, allocate_standard_voice_pool, "config");
-	GDBIND_METHOD(CriAtomExVoicePool, allocate_hcamx_voice_pool, "config");
+	GDBIND_STATIC_METHOD(CriAtomExVoicePool, allocate_standard_voice_pool, "config");
+	GDBIND_STATIC_METHOD(CriAtomExVoicePool, allocate_hcamx_voice_pool, "config");
 	GDBIND_METHOD(CriAtomExVoicePool, free_voice_pool);
 	GDBIND_METHOD(CriAtomExVoicePool, get_num_used_voices);
 	GDBIND_METHOD(CriAtomExVoicePool, get_num_limit_voices);
@@ -21,7 +21,7 @@ CriAtomExVoicePool::~CriAtomExVoicePool()
 	free_voice_pool();
 }
 
-void CriAtomExVoicePool::allocate_standard_voice_pool(Dictionary config)
+Ref<CriAtomExVoicePool> CriAtomExVoicePool::allocate_standard_voice_pool(Dictionary config)
 {
 	CriAtomExStandardVoicePoolConfig voicepool_config;
 	criAtomExVoicePool_SetDefaultConfigForStandardVoicePool(&voicepool_config);
@@ -41,10 +41,16 @@ void CriAtomExVoicePool::allocate_standard_voice_pool(Dictionary config)
 	if (config.has("sound_renderer_type"))
 		voicepool_config.player_config.sound_renderer_type = (CriAtomSoundRendererType)(int)config["sound_renderer_type"];
 
-	this->handle = criAtomExVoicePool_AllocateStandardVoicePool(&voicepool_config, nullptr, 0);
+	auto handle = criAtomExVoicePool_AllocateStandardVoicePool(&voicepool_config, nullptr, 0);
+	if (handle == nullptr) {
+		return nullptr;
+	}
+	Ref<CriAtomExVoicePool> voicepool = memnew(CriAtomExVoicePool);
+	voicepool->handle = handle;
+	return voicepool;
 }
 
-void CriAtomExVoicePool::allocate_hcamx_voice_pool(Dictionary config)
+Ref<CriAtomExVoicePool> CriAtomExVoicePool::allocate_hcamx_voice_pool(Dictionary config)
 {
 	CriAtomExHcaMxVoicePoolConfig voicepool_config;
 	criAtomExVoicePool_SetDefaultConfigForHcaMxVoicePool(&voicepool_config);
@@ -60,7 +66,13 @@ void CriAtomExVoicePool::allocate_hcamx_voice_pool(Dictionary config)
 	if (config.has("streaming_flag"))
 		voicepool_config.player_config.streaming_flag = (bool)config["streaming_flag"];
 
-	this->handle = criAtomExVoicePool_AllocateHcaMxVoicePool(&voicepool_config, nullptr, 0);
+	auto handle = criAtomExVoicePool_AllocateHcaMxVoicePool(&voicepool_config, nullptr, 0);
+	if (handle == nullptr) {
+		return nullptr;
+	}
+	Ref<CriAtomExVoicePool> voicepool = memnew(CriAtomExVoicePool);
+	voicepool->handle = handle;
+	return voicepool;
 }
 
 void CriAtomExVoicePool::free_voice_pool()

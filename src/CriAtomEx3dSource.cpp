@@ -5,16 +5,15 @@ namespace godot {
 
 void CriAtomEx3dSource::_bind_methods()
 {
-	register_method("_init", &CriAtomEx3dSource::_init);
-	register_method("create", &CriAtomEx3dSource::create);
-	register_method("destroy", &CriAtomEx3dSource::destroy);
-	register_method("update", &CriAtomEx3dSource::update);
-	register_method("reset_parameters", &CriAtomEx3dSource::reset_parameters);
-	register_method("set_position", &CriAtomEx3dSource::set_position);
-	register_method("set_velocity", &CriAtomEx3dSource::set_velocity);
-	register_method("set_orientation", &CriAtomEx3dSource::set_orientation);
-	register_method("set_cone_parameter", &CriAtomEx3dSource::set_cone_parameter);
-	register_method("set_minmax_attenuation_distance", &CriAtomEx3dSource::set_minmax_attenuation_distance);
+	ClassDB::bind_static_method("CriAtomEx3dSource", D_METHOD("create", "config"), &CriAtomEx3dSource::createSource);
+	GDBIND_METHOD(CriAtomEx3dSource, destroy);
+	GDBIND_METHOD(CriAtomEx3dSource, update);
+	GDBIND_METHOD(CriAtomEx3dSource, reset_parameters);
+	GDBIND_METHOD(CriAtomEx3dSource, set_position);
+	GDBIND_METHOD(CriAtomEx3dSource, set_velocity);
+	GDBIND_METHOD(CriAtomEx3dSource, set_orientation);
+	GDBIND_METHOD(CriAtomEx3dSource, set_cone_parameter);
+	GDBIND_METHOD(CriAtomEx3dSource, set_minmax_attenuation_distance);
 }
 
 CriAtomEx3dSource::CriAtomEx3dSource()
@@ -26,17 +25,19 @@ CriAtomEx3dSource::~CriAtomEx3dSource()
 	destroy();
 }
 
-void CriAtomEx3dSource::_init()
+Ref<CriAtomEx3dSource> CriAtomEx3dSource::createSource(Dictionary config)
 {
-}
-
-void CriAtomEx3dSource::create(Dictionary config)
-{
-	destroy();
-
 	CriAtomEx3dSourceConfig source_config;
 	criAtomEx3dSource_SetDefaultConfig(&source_config);
-	handle = criAtomEx3dSource_Create(&source_config, nullptr, 0);
+
+	auto handle = criAtomEx3dSource_Create(&source_config, nullptr, 0);
+	if (handle == nullptr) {
+		return nullptr;
+	}
+	
+	Ref<CriAtomEx3dSource> source = memnew(CriAtomEx3dSource);
+	source->handle = handle;
+	return source;
 }
 
 void CriAtomEx3dSource::destroy()

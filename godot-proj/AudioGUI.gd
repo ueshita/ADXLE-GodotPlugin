@@ -1,9 +1,9 @@
 extends CanvasLayer
 
-onready var cue_dropdown := $TabWindow/Playback/Split/Playback/CueDropdown
-onready var status_label := $TabWindow/Playback/Split/Playback/PlayStatus
+@onready var cue_dropdown := $TabWindow/Playback/Split/Playback/CueDropdown
+@onready var status_label := $TabWindow/Playback/Split/Playback/PlayStatus
 
-onready var status_strings := CriAtomEx.PlayerStatus.keys()
+@onready var status_strings := CriAtomEx.PlayerStatus.keys()
 
 func _ready():
 	var index = 0

@@ -16,9 +16,7 @@ public:
 
     ~CriAtomEx3dListener();
 
-	void _init();
-
-	void create(Dictionary config);
+	static Ref<CriAtomEx3dListener> createListener(Dictionary config);
 
 	void destroy();
 

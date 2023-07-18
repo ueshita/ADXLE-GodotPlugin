@@ -39,6 +39,8 @@
 /bin/
 /x64/
 /Win32/
+/build/
 
 .vs/
 .import/
+.godot

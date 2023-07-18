@@ -6,21 +6,20 @@ namespace godot {
 
 void CriAtomExCategory::_bind_methods()
 {
-	register_method("_init", &CriAtomExCategory::_init);
-	register_method("set_name", &CriAtomExCategory::set_name);
-	register_method("get_name", &CriAtomExCategory::get_name);
-	register_method("set_id", &CriAtomExCategory::set_id);
-	register_method("get_id", &CriAtomExCategory::get_id);
-	register_method("set_volume", &CriAtomExCategory::set_volume);
-	register_method("get_volume", &CriAtomExCategory::get_volume);
-	register_method("stop", &CriAtomExCategory::stop);
-	register_method("stop_without_release_time", &CriAtomExCategory::stop_without_release_time);
-	register_method("pause", &CriAtomExCategory::pause);
-	register_method("is_paused", &CriAtomExCategory::is_paused);
-	register_method("solo", &CriAtomExCategory::solo);
-	register_method("is_soloed", &CriAtomExCategory::is_soloed);
-	register_method("mute", &CriAtomExCategory::mute);
-	register_method("is_muted", &CriAtomExCategory::is_muted);
+	GDBIND_METHOD(CriAtomExCategory, set_name, "name");
+	GDBIND_METHOD(CriAtomExCategory, get_name);
+	GDBIND_METHOD(CriAtomExCategory, set_id, "id");
+	GDBIND_METHOD(CriAtomExCategory, get_id);
+	GDBIND_METHOD(CriAtomExCategory, set_volume, "volume");
+	GDBIND_METHOD(CriAtomExCategory, get_volume);
+	GDBIND_METHOD(CriAtomExCategory, stop);
+	GDBIND_METHOD(CriAtomExCategory, stop_without_release_time);
+	GDBIND_METHOD(CriAtomExCategory, pause, "paused");
+	GDBIND_METHOD(CriAtomExCategory, is_paused);
+	GDBIND_METHOD(CriAtomExCategory, solo, "soloed");
+	GDBIND_METHOD(CriAtomExCategory, is_soloed);
+	GDBIND_METHOD(CriAtomExCategory, mute, "muted");
+	GDBIND_METHOD(CriAtomExCategory, is_muted);
 }
 
 CriAtomExCategory::CriAtomExCategory()
@@ -31,20 +30,16 @@ CriAtomExCategory::~CriAtomExCategory()
 {
 }
 
-void CriAtomExCategory::_init()
-{
-}
-
 void CriAtomExCategory::set_name(String category_name)
 {
 	CriAtomExCategoryInfo info;
 
-	if (criAtomExAcf_GetCategoryInfoByName(FixedString<256>(category_name).str, &info)) {
+	if (criAtomExAcf_GetCategoryInfoByName(category_name.utf8().get_data(), &info)) {
 		id = info.id;
 	} else {
 		char message[256];
-		snprintf(message, sizeof(message), "Specified category not found: %s", FixedString<256>(category_name).str);
-		api->godot_print_error(message, "CriAtomExCategory::set_name", "CriAtomExCategory.cpp", __LINE__);
+		snprintf(message, sizeof(message), "Specified category not found: %s", category_name.utf8().get_data());
+		godot::_err_print_error("CriAtomExCategory::set_name", "CriAtomExCategory.cpp", __LINE__, message, false, false);
 	}
 }
 
@@ -57,7 +52,7 @@ String CriAtomExCategory::get_name() const
 	} else {
 		char message[256];
 		snprintf(message, sizeof(message), "Specified category not found: %d", id);
-		api->godot_print_error(message, "CriAtomExCategory::get_name", "CriAtomExCategory.cpp", __LINE__);
+		godot::_err_print_error("CriAtomExCategory::get_name", "CriAtomExCategory.cpp", __LINE__, message, false, false);
 		return "";
 	}
 }

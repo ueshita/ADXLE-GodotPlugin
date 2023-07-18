@@ -16,9 +16,9 @@ public:
 	CriAtomExVoicePool();
     ~CriAtomExVoicePool();
 
-	void allocate_standard_voice_pool(Dictionary config);
+	static Ref<CriAtomExVoicePool> allocate_standard_voice_pool(Dictionary config);
 
-	void allocate_hcamx_voice_pool(Dictionary config);
+	static Ref<CriAtomExVoicePool> allocate_hcamx_voice_pool(Dictionary config);
 	
 	void free_voice_pool();
 

@@ -8,15 +8,15 @@ namespace godot {
 class CriAtomExAcb : public RefCounted
 {
     GDCLASS(CriAtomExAcb, RefCounted)
+
 public:
     static void _bind_methods();
 
+public:
 	CriAtomExAcb();
     ~CriAtomExAcb();
 
-	void _init();
-
-	bool load_acb_file(String acb_path, String awb_path);
+	static Ref<CriAtomExAcb> load_acb_file(String acb_path, String awb_path);
 	
 	void release();
 

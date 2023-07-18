@@ -1,3 +1,4 @@
+#include <godot_cpp/variant/utility_functions.hpp>
 #include "GDLibrary.h"
 #include "CriAtomExContext.h"
 #include "CriWareFileIo.h"
@@ -6,13 +7,12 @@ namespace godot {
 
 void CriAtomExContext::_bind_methods()
 {
-	register_method("_init", &CriAtomExContext::_init);
-	register_method("initialize", &CriAtomExContext::initialize);
-	register_method("finalize", &CriAtomExContext::finalize);
-	register_method("attach_dspbus_setting", &CriAtomExContext::attach_dspbus_setting);
-	register_method("detach_dspbus_setting", &CriAtomExContext::detach_dspbus_setting);
-	register_method("apply_dspbus_snapshot", &CriAtomExContext::apply_dspbus_snapshot);
-	register_method("get_applied_dspbus_snapshot_name", &CriAtomExContext::get_applied_dspbus_snapshot_name);
+	GDBIND_METHOD(CriAtomExContext, initialize, "config");
+	GDBIND_METHOD(CriAtomExContext, finalize);
+	GDBIND_METHOD(CriAtomExContext, attach_dspbus_setting, "setting_name");
+	GDBIND_METHOD(CriAtomExContext, detach_dspbus_setting);
+	GDBIND_METHOD(CriAtomExContext, apply_dspbus_snapshot, "snapshot_name");
+	GDBIND_METHOD(CriAtomExContext, get_applied_dspbus_snapshot_name);
 
 	//register_signal("sequence_event", );
 	//register_signal("beatsync_position", );
@@ -24,9 +24,9 @@ CriAtomExContext::CriAtomExContext()
 	criErr_SetCallback([](const CriChar8 *errid, CriUint32 p1, CriUint32 p2, CriUint32 *parray){
 		auto errmsg = criErr_ConvertIdToMessage(errid, p1, p2);
 		if (errmsg[0] == 'W') {
-			api->godot_print_warning(errmsg, "CRIERR", "Internal", 0);
+			UtilityFunctions::print(errmsg);
 		} else {
-			api->godot_print_error(errmsg, "CRIERR", "Internal", 0);
+			UtilityFunctions::printerr(errmsg);
 		}
 	});
 
@@ -51,8 +51,8 @@ void CriAtomExContext::initialize(String acf_file, Dictionary config)
 
 	// Set Godot allocator
 	criAtomEx_SetUserAllocator(
-		[](void *obj, CriUint32 size){ return godot::api->godot_alloc((int)size); },
-		[](void *obj, void *mem){ godot::api->godot_free(mem); },
+		[](void *obj, CriUint32 size){ return memalloc((int)size); },
+		[](void *obj, void *mem){ memfree(mem); },
 		nullptr);
 
 	// Setup filesystem
@@ -100,7 +100,7 @@ void CriAtomExContext::initialize(String acf_file, Dictionary config)
 	this->is_initialized = true;
 
 	// Register config file
-	if (criAtomEx_RegisterAcfFile(nullptr, FixedString<1024>(acf_file).str, nullptr, 0) == CRI_FALSE) {
+	if (criAtomEx_RegisterAcfFile(nullptr, acf_file.utf8().get_data(), nullptr, 0) == CRI_FALSE) {
 		return;
 	}
 
@@ -145,7 +145,7 @@ void CriAtomExContext::finalize()
 
 void CriAtomExContext::attach_dspbus_setting(String setting_name)
 {
-	criAtomEx_AttachDspBusSetting(FixedString<256>(setting_name).str, nullptr, 0);
+	criAtomEx_AttachDspBusSetting(setting_name.utf8().get_data(), nullptr, 0);
 }
 
 void CriAtomExContext::detach_dspbus_setting()
@@ -155,7 +155,7 @@ void CriAtomExContext::detach_dspbus_setting()
 
 void CriAtomExContext::apply_dspbus_snapshot(String snapshot_name, float time_ms)
 {
-	criAtomEx_ApplyDspBusSnapshot(FixedString<256>(snapshot_name).str, time_ms);
+	criAtomEx_ApplyDspBusSnapshot(snapshot_name.utf8().get_data(), time_ms);
 }
 
 String CriAtomExContext::get_applied_dspbus_snapshot_name()

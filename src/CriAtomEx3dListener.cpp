@@ -5,14 +5,13 @@ namespace godot {
 
 void CriAtomEx3dListener::_bind_methods()
 {
-	register_method("_init", &CriAtomEx3dListener::_init);
-	register_method("create", &CriAtomEx3dListener::create);
-	register_method("destroy", &CriAtomEx3dListener::destroy);
-	register_method("update", &CriAtomEx3dListener::update);
-	register_method("reset_parameters", &CriAtomEx3dListener::reset_parameters);
-	register_method("set_position", &CriAtomEx3dListener::set_position);
-	register_method("set_velocity", &CriAtomEx3dListener::set_velocity);
-	register_method("set_orientation", &CriAtomEx3dListener::set_orientation);
+	ClassDB::bind_static_method("CriAtomEx3dListener", D_METHOD("create", "config"), &CriAtomEx3dListener::createListener);
+	GDBIND_METHOD(CriAtomEx3dListener, destroy);
+	GDBIND_METHOD(CriAtomEx3dListener, update);
+	GDBIND_METHOD(CriAtomEx3dListener, reset_parameters);
+	GDBIND_METHOD(CriAtomEx3dListener, set_position);
+	GDBIND_METHOD(CriAtomEx3dListener, set_velocity);
+	GDBIND_METHOD(CriAtomEx3dListener, set_orientation);
 }
 
 CriAtomEx3dListener::CriAtomEx3dListener()
@@ -24,17 +23,15 @@ CriAtomEx3dListener::~CriAtomEx3dListener()
 	destroy();
 }
 
-void CriAtomEx3dListener::_init()
+Ref<CriAtomEx3dListener> CriAtomEx3dListener::createListener(Dictionary config)
 {
-}
-
-void CriAtomEx3dListener::create(Dictionary config)
-{
-	destroy();
-
 	CriAtomEx3dListenerConfig listener_config;
 	criAtomEx3dListener_SetDefaultConfig(&listener_config);
-	handle = criAtomEx3dListener_Create(&listener_config, nullptr, 0);
+	auto handle = criAtomEx3dListener_Create(&listener_config, nullptr, 0);
+
+	Ref<CriAtomEx3dListener> listener = memnew(CriAtomEx3dListener);
+	listener->handle = handle;
+	return listener;
 }
 
 void CriAtomEx3dListener::destroy()

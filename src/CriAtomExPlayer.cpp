@@ -8,7 +8,7 @@ namespace godot {
 
 void CriAtomExPlayer::_bind_methods()
 {
-	GDBIND_METHOD(CriAtomExPlayer, create, "config");
+	ClassDB::bind_static_method("CriAtomExPlayer", D_METHOD("create", "config"), &CriAtomExPlayer::createPlayer);
 	GDBIND_METHOD(CriAtomExPlayer, destroy);
 	GDBIND_METHOD(CriAtomExPlayer, set_cue_name, "acb", "cue_name");
 	GDBIND_METHOD(CriAtomExPlayer, set_cue_id, "acb", "cue_id");
@@ -52,10 +52,8 @@ CriAtomExPlayer::~CriAtomExPlayer()
 	destroy();
 }
 
-void CriAtomExPlayer::create(Dictionary config)
+Ref<CriAtomExPlayer> CriAtomExPlayer::createPlayer(Dictionary config)
 {
-	destroy();
-
 	CriAtomExPlayerConfig player_config;
 	criAtomExPlayer_SetDefaultConfig(&player_config);
 
@@ -72,7 +70,14 @@ void CriAtomExPlayer::create(Dictionary config)
 	if (config.has("enable_audio_synced_timer"))
 		player_config.enable_audio_synced_timer = (bool)config["enable_audio_synced_timer"];
 
-	handle = criAtomExPlayer_Create(&player_config, nullptr, 0);
+	auto handle = criAtomExPlayer_Create(&player_config, nullptr, 0);
+	if (handle == nullptr) {
+		return nullptr;
+	}
+	
+	Ref<CriAtomExPlayer> player = memnew(CriAtomExPlayer);
+	player->handle = handle;
+	return player;
 }
 
 void CriAtomExPlayer::destroy()

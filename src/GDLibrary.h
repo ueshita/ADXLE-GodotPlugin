@@ -12,6 +12,14 @@
 	ClassDB::bind_method(D_METHOD(#method_name, ##__VA_ARGS__), &class_name::method_name)
 #endif
 
+#ifdef _MSC_VER
+#define GDBIND_STATIC_METHOD(class_name, method_name, ...) \
+	ClassDB::bind_static_method(#class_name, D_METHOD(#method_name, __VA_ARGS__), &class_name::method_name)
+#else
+#define GDBIND_STATIC_METHOD(class_name, method_name, ...) \
+	ClassDB::bind_static_method(#class_name, D_METHOD(#method_name, ##__VA_ARGS__), &class_name::method_name)
+#endif
+
 #define GDBIND_PROPERTY_SET_GET(class_name, property_name, type) \
 	ClassDB::bind_method(D_METHOD("set_"#property_name, #property_name), &class_name::set_##property_name); \
 	ClassDB::bind_method(D_METHOD("get_"#property_name), &class_name::get_##property_name); \

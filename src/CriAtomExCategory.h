@@ -14,8 +14,6 @@ public:
 	CriAtomExCategory();
     ~CriAtomExCategory();
 
-	void _init();
-
 	void set_name(String category_name);
 
 	String get_name() const;

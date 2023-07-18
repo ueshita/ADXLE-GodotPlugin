@@ -21,7 +21,7 @@ public:
 
     ~CriAtomExPlayer();
 
-	void create(Dictionary config);
+	static Ref<CriAtomExPlayer> createPlayer(Dictionary config);
 
 	void destroy();
 
