@@ -415,6 +415,11 @@ elif env["platform"] == "html5":
     env.Replace(SHLINKFLAGS='$LINKFLAGS')
 
 
+if env["platform"] == "windows":
+    env.Append(CCFLAGS="/DTYPED_METHOD_BIND")
+else:
+    env.Append(CCFLAGS="-DTYPED_METHOD_BIND")
+
 # Generate bindings?
 json_api_file = ""
 
@@ -441,7 +446,6 @@ if env["platform"] == "ios":
     arch_suffix = env["ios_arch"]
 
 # Local dependency paths, adapt them to your setup
-godot_headers_path = "godot-cpp/godot-headers/"
 godot_cpp_path = "godot-cpp/"
 godot_cpp_lib = "libgodot-cpp"
 
@@ -465,7 +469,6 @@ elif env["platform"] == "android":
 
 
 env.Append(CPPPATH=[".", 
-    godot_headers_path, 
     godot_cpp_path + "gdextension/", 
     godot_cpp_path + "include/", 
     godot_cpp_path + "gen/include/",
