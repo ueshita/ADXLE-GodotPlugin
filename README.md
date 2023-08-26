@@ -6,15 +6,14 @@ A plugin of ADXLE for GodotEngine
 
 ## Requiments
 
-- python3
+- Python3
 - Scons
-- Visual Studio 2023
+- Visual Studio 2022
 
 ## Clone repos
 
 ```sh
-git clone https://github.com/ueshita/ADXLE-GodotPlugin.git
-git submodule update --init --recursive
+git clone https://github.com/ueshita/ADXLE-GodotPlugin.git --recursive
 ```
 
 ## Get ADXLE SDK
