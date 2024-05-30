@@ -17,6 +17,8 @@ public:
     ~CriAtomExAcb();
 
 	static Ref<CriAtomExAcb> load_acb_file(String acb_path, String awb_path);
+
+	static void release_all();
 	
 	void release();
 

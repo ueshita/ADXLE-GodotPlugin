@@ -6,6 +6,7 @@ namespace godot {
 void CriAtomExAcb::_bind_methods()
 {
 	GDBIND_STATIC_METHOD(CriAtomExAcb, load_acb_file, "acb_path", "awb_path");
+	GDBIND_STATIC_METHOD(CriAtomExAcb, release_all);
 	GDBIND_METHOD(CriAtomExAcb, release);
 	GDBIND_METHOD(CriAtomExAcb, get_all_cue_infos);
 }
@@ -30,6 +31,15 @@ Ref<CriAtomExAcb> CriAtomExAcb::load_acb_file(String acb_path, String awb_path)
 	Ref<CriAtomExAcb> acb = memnew(CriAtomExAcb);
 	acb->handle = handle;
 	return acb;
+}
+
+void CriAtomExAcb::release_all()
+{
+	if (!criAtomEx_IsInitialized()) {
+		return;
+	}
+
+	criAtomExAcb_ReleaseAll();
 }
 
 void CriAtomExAcb::release()
