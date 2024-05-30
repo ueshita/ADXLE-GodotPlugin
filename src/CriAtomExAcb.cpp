@@ -20,10 +20,12 @@ CriAtomExAcb::~CriAtomExAcb()
 	release();
 }
 
-Ref<CriAtomExAcb> CriAtomExAcb::load_acb_file(String acb_path, String awb_path)
+Ref<CriAtomExAcb> CriAtomExAcb::load_acb_file(String acb_path, Variant awb_path)
 {
-	auto handle = criAtomExAcb_LoadAcbFile(nullptr, acb_path.utf8().get_data(), 
-		nullptr, awb_path.utf8().get_data(), nullptr, 0);
+	auto handle = criAtomExAcb_LoadAcbFile(
+		nullptr, acb_path.utf8().get_data(), 
+		nullptr, (awb_path.get_type() == Variant::STRING) ? ((String)awb_path).utf8().get_data() : nullptr, 
+		nullptr, 0);
 	if (handle == nullptr) {
 		return nullptr;
 	}
