@@ -1,0 +1,211 @@
+on:
+  push:
+    branches:
+      - main
+      - ci_test
+    paths:
+      - '.github/**'
+      - 'src/**'
+      - 'SConstruct'
+      - 'build.py'
+jobs:
+  setup-sdk:
+    name: Setup SDK
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check sdk package cache
+        id: check-cache-sdk
+        uses: actions/cache/restore@v4
+        with:
+          enableCrossOsArchive: true
+          path: ./cri
+          key: sdk-${{ hashFiles('./sdk_url.txt') }}
+      - name: Install ADXLE SDK
+        if: ${{ steps.check-cache-sdk.outputs.cache-hit != 'true' }}
+        run: python get_adxle_sdk.py
+      - name: Save sdk package cache
+        if: ${{ steps.check-cache-sdk.outputs.cache-hit != 'true' }}
+        uses: actions/cache/save@v4
+        with:
+          enableCrossOsArchive: true
+          path: ./cri
+          key: sdk-${{ hashFiles('./sdk_url.txt') }}
+
+
+  android:
+    name: Build for Android
+    runs-on: ubuntu-latest
+    needs: setup-sdk
+    steps:
+      - uses: actions/checkout@v4
+      - name: Update Submodules
+        run: git submodule update --init --recursive
+      - name: Restore sdk package cache
+        id: restore-sdk-restore
+        uses: actions/cache/restore@v4
+        with:
+          enableCrossOsArchive: true
+          path: ./cri
+          key: sdk-${{ hashFiles('./sdk_url.txt') }}
+          fail-on-cache-miss: true
+      - name: Setup Android NDK
+        uses: nttld/setup-ndk@v1
+        with:
+          ndk-version: r23c
+          link-to-sdk: true
+      - name: Build binaries
+        run: |
+          sudo apt-get install scons
+          python3 build.py platform=android
+      - name: Upload binaries
+        uses: actions/upload-artifact@v4
+        with:
+          name: bin_android
+          path: ./godot-proj/addons/adxle/bin
+
+  macos:
+    name: Build for macOS
+    runs-on: macOS-latest
+    needs: setup-sdk
+    steps:
+      - uses: actions/checkout@v4
+      - name: Update Submodules
+        run: git submodule update --init --recursive
+      - name: Restore sdk package cache
+        id: restore-sdk-restore
+        uses: actions/cache/restore@v4
+        with:
+          enableCrossOsArchive: true
+          path: ./cri
+          key: sdk-${{ hashFiles('./sdk_url.txt') }}
+          fail-on-cache-miss: true
+      - name: Build binaries
+        run: |
+          brew install scons
+          python3 build.py platform=macos
+      - name: Upload binaries
+        uses: actions/upload-artifact@v4
+        with:
+          name: bin_macos
+          path: ./godot-proj/addons/adxle/bin
+
+  ios:
+    name: Build for iOS
+    runs-on: macOS-latest
+    needs: setup-sdk
+    steps:
+      - uses: actions/checkout@v4
+      - name: Update Submodules
+        run: git submodule update --init --recursive
+      - name: Restore sdk package cache
+        id: restore-sdk-restore
+        uses: actions/cache/restore@v4
+        with:
+          enableCrossOsArchive: true
+          path: ./cri
+          key: sdk-${{ hashFiles('./sdk_url.txt') }}
+          fail-on-cache-miss: true
+      - name: Build binaries
+        run: |
+          brew install scons
+          python3 build.py platform=ios
+      - name: Upload binaries
+        uses: actions/upload-artifact@v4
+        with:
+          name: bin_ios
+          path: ./godot-proj/addons/adxle/bin
+
+  windows:
+    name: Build for Windows
+    runs-on: windows-latest
+    needs: setup-sdk
+    steps:
+      - uses: actions/checkout@v4
+      - name: Update Submodules
+        run: git submodule update --init --recursive
+      - name: Restore sdk package cache
+        id: restore-sdk-restore
+        uses: actions/cache/restore@v4
+        with:
+          enableCrossOsArchive: true
+          path: ./cri
+          key: sdk-${{ hashFiles('./sdk_url.txt') }}
+          fail-on-cache-miss: true
+      - name: Build binaries
+        run: |
+          python -m pip install scons
+          python build.py platform=windows
+        shell: cmd
+      - name: Upload binaries
+        uses: actions/upload-artifact@v4
+        with:
+          name: bin_windows
+          path: ./godot-proj/addons/adxle/bin
+
+  # web:
+  #   name: Build for Web
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - uses: actions/checkout@v4
+  #     - name: Update Submodules
+  #       run: git submodule update --init --recursive
+  #     - name: Setup emsdk
+  #       uses: mymindstorm/setup-emsdk@v12
+  #       with:
+  #         version: 3.1.18
+  #         actions-cache-folder: './emsdk'
+  #     - name: Build binaries
+  #       run: |
+  #         sudo apt-get install scons
+  #         python3 get_adx2le_sdk.py
+  #         python3 build.py platform=web
+  #     - name: Upload binaries
+  #       uses: actions/upload-artifact@v4
+  #       with:
+  #         name: bin_web
+  #         path: ./godot-proj/addons/adxle/bin
+
+  merge:
+    name: Merge 
+    runs-on: ubuntu-latest
+    # needs: [android, macos, ios, windows, web]
+    needs: [android, macos, ios, windows]
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download Android binaries
+        uses: actions/download-artifact@v4
+        with:
+          name: bin_android
+          path: ./godot-proj/addons/adxle/bin
+
+      - name: Download macOS binaries
+        uses: actions/download-artifact@v4
+        with:
+          name: bin_macos
+          path: ./godot-proj/addons/adxle/bin
+
+      - name: Download iOS binaries
+        uses: actions/download-artifact@v4
+        with:
+          name: bin_ios
+          path: ./godot-proj/addons/adxle/bin
+
+      - name: Download Windows binaries
+        uses: actions/download-artifact@v4
+        with:
+          name: bin_windows
+          path: ./godot-proj/addons/adxle/bin
+
+      # - name: Download web binaries
+      #   uses: actions/download-artifact@v4
+      #   with:
+      #     name: bin_web
+      #     path: ./godot-proj/addons/adxle/bin
+
+      - name: Upload built package
+        uses: actions/upload-artifact@v4
+        with:
+          name: addons
+          path: ./godot-proj/addons
