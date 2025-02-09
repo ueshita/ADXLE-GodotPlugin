@@ -5,7 +5,7 @@ namespace godot {
 
 void CriAtomEx3dSource::_bind_methods()
 {
-	ClassDB::bind_static_method("CriAtomEx3dSource", D_METHOD("create", "config"), &CriAtomEx3dSource::createSource);
+	ClassDB::bind_static_method("CriAtomEx3dSource", D_METHOD("create", "config"), &CriAtomEx3dSource::create_source);
 	GDBIND_METHOD(CriAtomEx3dSource, destroy);
 	GDBIND_METHOD(CriAtomEx3dSource, update);
 	GDBIND_METHOD(CriAtomEx3dSource, reset_parameters);
@@ -25,7 +25,7 @@ CriAtomEx3dSource::~CriAtomEx3dSource()
 	destroy();
 }
 
-Ref<CriAtomEx3dSource> CriAtomEx3dSource::createSource(Dictionary config)
+Ref<CriAtomEx3dSource> CriAtomEx3dSource::create_source(Dictionary config)
 {
 	CriAtomEx3dSourceConfig source_config;
 	criAtomEx3dSource_SetDefaultConfig(&source_config);

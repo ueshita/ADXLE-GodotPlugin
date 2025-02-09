@@ -16,7 +16,7 @@ public:
 
     ~CriAtomEx3dListener();
 
-	static Ref<CriAtomEx3dListener> createListener(Dictionary config);
+	static Ref<CriAtomEx3dListener> create_listener(Dictionary config);
 
 	void destroy();
 
@@ -29,6 +29,12 @@ public:
 	void set_velocity(Vector3 velocity);
 
 	void set_orientation(Vector3 front, Vector3 top);
+
+	void set_focus_point(Vector3 focus_point);
+
+	void set_distance_focus_level(float distance_focus_level);
+
+	void set_direction_focus_level(float direction_focus_level);
 
 	CriAtomEx3dListenerHn get_handle() const { return this->handle; }
 

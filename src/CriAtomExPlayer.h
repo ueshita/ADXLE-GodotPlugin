@@ -21,7 +21,11 @@ public:
 
     ~CriAtomExPlayer();
 
-	static Ref<CriAtomExPlayer> createPlayer(Dictionary config);
+	static Ref<CriAtomExPlayer> create_player(Dictionary config);
+
+	static void stop_all_players();
+
+	static void stop_all_players_without_release_time();
 
 	void destroy();
 
@@ -32,6 +36,8 @@ public:
 	void set_cue_index(Ref<CriAtomExAcb> acb, int cue_index);
 
 	uint32_t start();
+
+	uint32_t prepare();
 
 	void stop();
 
@@ -53,11 +59,25 @@ public:
 
 	void set_pan3d_angle(float pan3d_angle);
 
+	void set_pan3d_elevation(float pan3d_elevation);
+
 	void set_pan3d_interior_distance(float pan3d_interior_distance);
+
+	void set_pan3d_volume(float pan3d_volume);
+
+	void set_wideness(float wideness);
+
+	void set_spread(float spread);
 
 	void set_aisac_control_by_name(String control_name, float value);
 
+	float get_aisac_control_by_name(String control_name);
+
 	void set_aisac_control_by_id(int control_id, float value);
+
+	float get_aisac_control_by_id(int control_id);
+
+	void clear_aisac_controls();
 
 	void reset_parameters();
 

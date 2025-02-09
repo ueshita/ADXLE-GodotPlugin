@@ -5,7 +5,7 @@ namespace godot {
 
 void CriAtomEx3dListener::_bind_methods()
 {
-	ClassDB::bind_static_method("CriAtomEx3dListener", D_METHOD("create", "config"), &CriAtomEx3dListener::createListener);
+	ClassDB::bind_static_method("CriAtomEx3dListener", D_METHOD("create", "config"), &CriAtomEx3dListener::create_listener);
 	GDBIND_METHOD(CriAtomEx3dListener, destroy);
 	GDBIND_METHOD(CriAtomEx3dListener, update);
 	GDBIND_METHOD(CriAtomEx3dListener, reset_parameters);
@@ -23,7 +23,7 @@ CriAtomEx3dListener::~CriAtomEx3dListener()
 	destroy();
 }
 
-Ref<CriAtomEx3dListener> CriAtomEx3dListener::createListener(Dictionary config)
+Ref<CriAtomEx3dListener> CriAtomEx3dListener::create_listener(Dictionary config)
 {
 	CriAtomEx3dListenerConfig listener_config;
 	criAtomEx3dListener_SetDefaultConfig(&listener_config);
@@ -69,6 +69,21 @@ void CriAtomEx3dListener::set_velocity(Vector3 velocity)
 void CriAtomEx3dListener::set_orientation(Vector3 front, Vector3 top)
 {
 	criAtomEx3dListener_SetOrientation(handle, (CriAtomExVector*)&front, (CriAtomExVector*)&top);
+}
+
+void CriAtomEx3dListener::set_focus_point(Vector3 focus_point)
+{
+	criAtomEx3dListener_SetFocusPoint(handle, (CriAtomExVector*)&focus_point);
+}
+
+void CriAtomEx3dListener::set_distance_focus_level(float distance_focus_level)
+{
+	criAtomEx3dListener_SetDistanceFocusLevel(handle, distance_focus_level);
+}
+
+void CriAtomEx3dListener::set_direction_focus_level(float direction_focus_level)
+{
+	criAtomEx3dListener_SetDirectionFocusLevel(handle, direction_focus_level);
 }
 
 }

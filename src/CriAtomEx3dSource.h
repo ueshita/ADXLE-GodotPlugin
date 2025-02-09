@@ -16,7 +16,7 @@ public:
 
     ~CriAtomEx3dSource();
 
-	static Ref<CriAtomEx3dSource> createSource(Dictionary config);
+	static Ref<CriAtomEx3dSource> create_source(Dictionary config);
 
 	void destroy();
 
