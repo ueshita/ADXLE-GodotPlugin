@@ -42,6 +42,18 @@
     <ClCompile Include="src\CriAtomExContext.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\accept_dialog.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\accessibility_server.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\aes_context.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\aim_modifier3d.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\animatable_body2d.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
@@ -78,6 +90,12 @@
     <ClCompile Include="godot-cpp\gen\src\classes\animation_node_animation.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\animation_node_blend2.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\animation_node_blend3.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\animation_node_blend_space1_d.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
@@ -87,10 +105,7 @@
     <ClCompile Include="godot-cpp\gen\src\classes\animation_node_blend_tree.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
-    <ClCompile Include="godot-cpp\gen\src\classes\animation_node_blend2.cpp">
-      <Filter>godot-cpp\gen</Filter>
-    </ClCompile>
-    <ClCompile Include="godot-cpp\gen\src\classes\animation_node_blend3.cpp">
+    <ClCompile Include="godot-cpp\gen\src\classes\animation_node_extension.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\animation_node_one_shot.cpp">
@@ -138,6 +153,9 @@
     <ClCompile Include="godot-cpp\gen\src\classes\area3d.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\area_light3d.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\array_mesh.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
@@ -183,13 +201,13 @@
     <ClCompile Include="godot-cpp\gen\src\classes\audio_effect_eq.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
-    <ClCompile Include="godot-cpp\gen\src\classes\audio_effect_eq6.cpp">
-      <Filter>godot-cpp\gen</Filter>
-    </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\audio_effect_eq10.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\audio_effect_eq21.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\audio_effect_eq6.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\audio_effect_filter.cpp">
@@ -324,6 +342,18 @@
     <ClCompile Include="godot-cpp\gen\src\classes\audio_stream_wav.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\await_tweener.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\a_star2d.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\a_star3d.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\a_star_grid2d.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\back_buffer_copy.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
@@ -336,13 +366,22 @@
     <ClCompile Include="godot-cpp\gen\src\classes\bit_map.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\blit_material.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\bone2d.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\bone_attachment3d.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\bone_constraint3d.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\bone_map.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
-    <ClCompile Include="godot-cpp\gen\src\classes\bone2d.cpp">
+    <ClCompile Include="godot-cpp\gen\src\classes\bone_twist_disperser3d.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\box_container.cpp">
@@ -366,6 +405,12 @@
     <ClCompile Include="godot-cpp\gen\src\classes\callback_tweener.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\camera2d.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\camera3d.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\camera_attributes.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
@@ -382,12 +427,6 @@
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\camera_texture.cpp">
-      <Filter>godot-cpp\gen</Filter>
-    </ClCompile>
-    <ClCompile Include="godot-cpp\gen\src\classes\camera2d.cpp">
-      <Filter>godot-cpp\gen</Filter>
-    </ClCompile>
-    <ClCompile Include="godot-cpp\gen\src\classes\camera3d.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\canvas_group.cpp">
@@ -417,16 +456,22 @@
     <ClCompile Include="godot-cpp\gen\src\classes\capsule_shape3d.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\ccdik3d.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\center_container.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
-    <ClCompile Include="godot-cpp\gen\src\classes\char_fx_transform.cpp">
+    <ClCompile Include="godot-cpp\gen\src\classes\chain_ik3d.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\character_body2d.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\character_body3d.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\char_fx_transform.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\check_box.cpp">
@@ -465,6 +510,9 @@
     <ClCompile Include="godot-cpp\gen\src\classes\collision_shape3d.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\color_palette.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\color_picker.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
@@ -486,9 +534,6 @@
     <ClCompile Include="godot-cpp\gen\src\classes\compressed_cubemap_array.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
-    <ClCompile Include="godot-cpp\gen\src\classes\compressed_texture_layered.cpp">
-      <Filter>godot-cpp\gen</Filter>
-    </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\compressed_texture2d.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
@@ -496,6 +541,9 @@
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\compressed_texture3d.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\compressed_texture_layered.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\concave_polygon_shape2d.cpp">
@@ -519,10 +567,16 @@
     <ClCompile Include="godot-cpp\gen\src\classes\control.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\convert_transform_modifier3d.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\convex_polygon_shape2d.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\convex_polygon_shape3d.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\copy_transform_modifier3d.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\cpu_particles2d.cpp">
@@ -573,16 +627,16 @@
     <ClCompile Include="godot-cpp\gen\src\classes\curve.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
-    <ClCompile Include="godot-cpp\gen\src\classes\curve_texture.cpp">
-      <Filter>godot-cpp\gen</Filter>
-    </ClCompile>
-    <ClCompile Include="godot-cpp\gen\src\classes\curve_xyz_texture.cpp">
-      <Filter>godot-cpp\gen</Filter>
-    </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\curve2d.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\curve3d.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\curve_texture.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\curve_xyz_texture.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\cylinder_mesh.cpp">
@@ -597,31 +651,31 @@
     <ClCompile Include="godot-cpp\gen\src\classes\decal.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
-    <ClCompile Include="godot-cpp\gen\src\classes\dir_access.cpp">
-      <Filter>godot-cpp\gen</Filter>
-    </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\directional_light2d.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\directional_light3d.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\dir_access.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\display_server.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\dpi_texture.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\drawable_texture2d.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\dtls_server.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
-    <ClCompile Include="godot-cpp\gen\src\classes\e_net_connection.cpp">
-      <Filter>godot-cpp\gen</Filter>
-    </ClCompile>
-    <ClCompile Include="godot-cpp\gen\src\classes\e_net_multiplayer_peer.cpp">
-      <Filter>godot-cpp\gen</Filter>
-    </ClCompile>
-    <ClCompile Include="godot-cpp\gen\src\classes\e_net_packet_peer.cpp">
-      <Filter>godot-cpp\gen</Filter>
-    </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\editor_command_palette.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\editor_context_menu_plugin.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\editor_debugger_plugin.cpp">
@@ -630,10 +684,19 @@
     <ClCompile Include="godot-cpp\gen\src\classes\editor_debugger_session.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\editor_dock.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\editor_export_platform.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\editor_export_platform_android.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\editor_export_platform_apple_embedded.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\editor_export_platform_extension.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\editor_export_platform_ios.cpp">
@@ -648,6 +711,9 @@
     <ClCompile Include="godot-cpp\gen\src\classes\editor_export_platform_pc.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\editor_export_platform_vision_os.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\editor_export_platform_web.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
@@ -655,6 +721,9 @@
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\editor_export_plugin.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\editor_export_preset.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\editor_feature_profile.cpp">
@@ -753,6 +822,9 @@
     <ClCompile Include="godot-cpp\gen\src\classes\editor_syntax_highlighter.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\editor_toaster.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\editor_translation_parser_plugin.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
@@ -778,6 +850,21 @@
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\expression.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\external_texture.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\e_net_connection.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\e_net_multiplayer_peer.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\e_net_packet_peer.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\fabrik3d.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\fast_noise_lite.cpp">
@@ -807,6 +894,12 @@
     <ClCompile Include="godot-cpp\gen\src\classes\fog_volume.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\foldable_container.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\foldable_group.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\font.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
@@ -828,16 +921,28 @@
     <ClCompile Include="godot-cpp\gen\src\classes\gd_script.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
-    <ClCompile Include="godot-cpp\gen\src\classes\generic6_dof_joint3d.cpp">
+    <ClCompile Include="godot-cpp\gen\src\classes\gd_script_language_protocol.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
-    <ClCompile Include="godot-cpp\gen\src\classes\geometry_instance3d.cpp">
+    <ClCompile Include="godot-cpp\gen\src\classes\gd_script_syntax_highlighter.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\gd_script_text_document.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\gd_script_workspace.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\generic6_dof_joint3d.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\geometry2d.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\geometry3d.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\geometry_instance3d.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\gltf_accessor.cpp">
@@ -870,6 +975,9 @@
     <ClCompile Include="godot-cpp\gen\src\classes\gltf_node.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\gltf_object_model_property.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\gltf_physics_body.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
@@ -894,6 +1002,18 @@
     <ClCompile Include="godot-cpp\gen\src\classes\gltf_texture_sampler.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\godot_instance.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\gpu_particles2d.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\gpu_particles3d.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\gpu_particles_attractor3d.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\gpu_particles_attractor_box3d.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
@@ -903,7 +1023,7 @@
     <ClCompile Include="godot-cpp\gen\src\classes\gpu_particles_attractor_vector_field3d.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
-    <ClCompile Include="godot-cpp\gen\src\classes\gpu_particles_attractor3d.cpp">
+    <ClCompile Include="godot-cpp\gen\src\classes\gpu_particles_collision3d.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\gpu_particles_collision_box3d.cpp">
@@ -916,15 +1036,6 @@
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\gpu_particles_collision_sphere3d.cpp">
-      <Filter>godot-cpp\gen</Filter>
-    </ClCompile>
-    <ClCompile Include="godot-cpp\gen\src\classes\gpu_particles_collision3d.cpp">
-      <Filter>godot-cpp\gen</Filter>
-    </ClCompile>
-    <ClCompile Include="godot-cpp\gen\src\classes\gpu_particles2d.cpp">
-      <Filter>godot-cpp\gen</Filter>
-    </ClCompile>
-    <ClCompile Include="godot-cpp\gen\src\classes\gpu_particles3d.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\gradient.cpp">
@@ -954,25 +1065,10 @@
     <ClCompile Include="godot-cpp\gen\src\classes\grid_map.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\grid_map_editor_plugin.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\groove_joint2d.cpp">
-      <Filter>godot-cpp\gen</Filter>
-    </ClCompile>
-    <ClCompile Include="godot-cpp\gen\src\classes\h_box_container.cpp">
-      <Filter>godot-cpp\gen</Filter>
-    </ClCompile>
-    <ClCompile Include="godot-cpp\gen\src\classes\h_flow_container.cpp">
-      <Filter>godot-cpp\gen</Filter>
-    </ClCompile>
-    <ClCompile Include="godot-cpp\gen\src\classes\h_scroll_bar.cpp">
-      <Filter>godot-cpp\gen</Filter>
-    </ClCompile>
-    <ClCompile Include="godot-cpp\gen\src\classes\h_separator.cpp">
-      <Filter>godot-cpp\gen</Filter>
-    </ClCompile>
-    <ClCompile Include="godot-cpp\gen\src\classes\h_slider.cpp">
-      <Filter>godot-cpp\gen</Filter>
-    </ClCompile>
-    <ClCompile Include="godot-cpp\gen\src\classes\h_split_container.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\hashing_context.cpp">
@@ -993,6 +1089,27 @@
     <ClCompile Include="godot-cpp\gen\src\classes\http_request.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\h_box_container.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\h_flow_container.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\h_scroll_bar.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\h_separator.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\h_slider.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\h_split_container.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\ik_modifier3d.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\image.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
@@ -1005,10 +1122,10 @@
     <ClCompile Include="godot-cpp\gen\src\classes\image_texture.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
-    <ClCompile Include="godot-cpp\gen\src\classes\image_texture_layered.cpp">
+    <ClCompile Include="godot-cpp\gen\src\classes\image_texture3d.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
-    <ClCompile Include="godot-cpp\gen\src\classes\image_texture3d.cpp">
+    <ClCompile Include="godot-cpp\gen\src\classes\image_texture_layered.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\immediate_mesh.cpp">
@@ -1089,10 +1206,19 @@
     <ClCompile Include="godot-cpp\gen\src\classes\item_list.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\iterate_ik3d.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\jacobian_ik3d.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\java_class.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\java_class_wrapper.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\java_object.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\java_script_bridge.cpp">
@@ -1110,6 +1236,12 @@
     <ClCompile Include="godot-cpp\gen\src\classes\joint3d.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\joint_limitation3d.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\joint_limitation_cone3d.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\json.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
@@ -1125,19 +1257,22 @@
     <ClCompile Include="godot-cpp\gen\src\classes\label.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
-    <ClCompile Include="godot-cpp\gen\src\classes\label_settings.cpp">
-      <Filter>godot-cpp\gen</Filter>
-    </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\label3d.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
-    <ClCompile Include="godot-cpp\gen\src\classes\light_occluder2d.cpp">
+    <ClCompile Include="godot-cpp\gen\src\classes\label_settings.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\light2d.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\light3d.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\lightmapper.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\lightmapper_rd.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\lightmap_gi.cpp">
@@ -1149,19 +1284,25 @@
     <ClCompile Include="godot-cpp\gen\src\classes\lightmap_probe.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
-    <ClCompile Include="godot-cpp\gen\src\classes\lightmapper.cpp">
+    <ClCompile Include="godot-cpp\gen\src\classes\light_occluder2d.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
-    <ClCompile Include="godot-cpp\gen\src\classes\lightmapper_rd.cpp">
-      <Filter>godot-cpp\gen</Filter>
-    </ClCompile>
-    <ClCompile Include="godot-cpp\gen\src\classes\line_edit.cpp">
+    <ClCompile Include="godot-cpp\gen\src\classes\limit_angular_velocity_modifier3d.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\line2d.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\line_edit.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\link_button.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\logger.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\look_at_modifier3d.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\main_loop.cpp">
@@ -1221,16 +1362,10 @@
     <ClCompile Include="godot-cpp\gen\src\classes\mobile_vr_interface.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\modifier_bone_target3d.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\movie_writer.cpp">
-      <Filter>godot-cpp\gen</Filter>
-    </ClCompile>
-    <ClCompile Include="godot-cpp\gen\src\classes\multi_mesh.cpp">
-      <Filter>godot-cpp\gen</Filter>
-    </ClCompile>
-    <ClCompile Include="godot-cpp\gen\src\classes\multi_mesh_instance2d.cpp">
-      <Filter>godot-cpp\gen</Filter>
-    </ClCompile>
-    <ClCompile Include="godot-cpp\gen\src\classes\multi_mesh_instance3d.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\multiplayer_api.cpp">
@@ -1249,6 +1384,15 @@
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\multiplayer_synchronizer.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\multi_mesh.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\multi_mesh_instance2d.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\multi_mesh_instance3d.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\mutex.cpp">
@@ -1311,7 +1455,13 @@
     <ClCompile Include="godot-cpp\gen\src\classes\navigation_server2d.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\navigation_server2d_manager.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\navigation_server3d.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\navigation_server3d_manager.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\nine_patch_rect.cpp">
@@ -1341,13 +1491,13 @@
     <ClCompile Include="godot-cpp\gen\src\classes\object.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\occluder3d.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\occluder_instance3d.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\occluder_polygon2d.cpp">
-      <Filter>godot-cpp\gen</Filter>
-    </ClCompile>
-    <ClCompile Include="godot-cpp\gen\src\classes\occluder3d.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\offline_multiplayer_peer.cpp">
@@ -1362,13 +1512,40 @@
     <ClCompile Include="godot-cpp\gen\src\classes\omni_light3d.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\open_xrapi_extension.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\open_xrip_binding.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\open_xrip_binding_modifier.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\open_xr_action.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\open_xr_action_binding_modifier.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\open_xr_action_map.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\open_xr_action_set.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\open_xr_analog_threshold_modifier.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\open_xr_anchor_tracker.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\open_xr_android_thread_settings_extension.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\open_xr_binding_modifier.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\open_xr_binding_modifier_editor.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\open_xr_composition_layer.cpp">
@@ -1383,13 +1560,40 @@
     <ClCompile Include="godot-cpp\gen\src\classes\open_xr_composition_layer_quad.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\open_xr_dpad_binding_modifier.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\open_xr_extension_wrapper.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\open_xr_extension_wrapper_extension.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\open_xr_frame_synthesis_extension.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\open_xr_future_extension.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\open_xr_future_result.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\open_xr_hand.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\open_xr_haptic_base.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\open_xr_haptic_vibration.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\open_xr_interaction_profile.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\open_xr_interaction_profile_editor.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\open_xr_interaction_profile_editor_base.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\open_xr_interaction_profile_metadata.cpp">
@@ -1398,10 +1602,103 @@
     <ClCompile Include="godot-cpp\gen\src\classes\open_xr_interface.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
-    <ClCompile Include="godot-cpp\gen\src\classes\open_xrapi_extension.cpp">
+    <ClCompile Include="godot-cpp\gen\src\classes\open_xr_marker_tracker.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
-    <ClCompile Include="godot-cpp\gen\src\classes\open_xrip_binding.cpp">
+    <ClCompile Include="godot-cpp\gen\src\classes\open_xr_plane_tracker.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\open_xr_render_model.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\open_xr_render_model_extension.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\open_xr_render_model_manager.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\open_xr_spatial_anchor_capability.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\open_xr_spatial_capability_configuration_anchor.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\open_xr_spatial_capability_configuration_april_tag.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\open_xr_spatial_capability_configuration_aruco.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\open_xr_spatial_capability_configuration_base_header.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\open_xr_spatial_capability_configuration_micro_qr_code.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\open_xr_spatial_capability_configuration_plane_tracking.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\open_xr_spatial_capability_configuration_qr_code.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\open_xr_spatial_component_anchor_list.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\open_xr_spatial_component_bounded2d_list.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\open_xr_spatial_component_bounded3d_list.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\open_xr_spatial_component_data.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\open_xr_spatial_component_marker_list.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\open_xr_spatial_component_mesh2d_list.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\open_xr_spatial_component_mesh3d_list.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\open_xr_spatial_component_parent_list.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\open_xr_spatial_component_persistence_list.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\open_xr_spatial_component_plane_alignment_list.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\open_xr_spatial_component_plane_semantic_label_list.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\open_xr_spatial_component_polygon2d_list.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\open_xr_spatial_context_persistence_config.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\open_xr_spatial_entity_extension.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\open_xr_spatial_entity_tracker.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\open_xr_spatial_marker_tracking_capability.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\open_xr_spatial_plane_tracking_capability.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\open_xr_spatial_query_result_data.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\open_xr_structure_base.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\open_xr_visibility_mask.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\optimized_translation.cpp">
@@ -1449,22 +1746,16 @@
     <ClCompile Include="godot-cpp\gen\src\classes\panorama_sky_material.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\parallax2d.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\parallax_background.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\parallax_layer.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
-    <ClCompile Include="godot-cpp\gen\src\classes\parallax2d.cpp">
-      <Filter>godot-cpp\gen</Filter>
-    </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\particle_process_material.cpp">
-      <Filter>godot-cpp\gen</Filter>
-    </ClCompile>
-    <ClCompile Include="godot-cpp\gen\src\classes\path_follow2d.cpp">
-      <Filter>godot-cpp\gen</Filter>
-    </ClCompile>
-    <ClCompile Include="godot-cpp\gen\src\classes\path_follow3d.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\path2d.cpp">
@@ -1473,19 +1764,25 @@
     <ClCompile Include="godot-cpp\gen\src\classes\path3d.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\path_follow2d.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\path_follow3d.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\pck_packer.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\performance.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
-    <ClCompile Include="godot-cpp\gen\src\classes\physical_bone_simulator3d.cpp">
-      <Filter>godot-cpp\gen</Filter>
-    </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\physical_bone2d.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\physical_bone3d.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\physical_bone_simulator3d.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\physical_sky_material.cpp">
@@ -1593,9 +1890,6 @@
     <ClCompile Include="godot-cpp\gen\src\classes\placeholder_mesh.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
-    <ClCompile Include="godot-cpp\gen\src\classes\placeholder_texture_layered.cpp">
-      <Filter>godot-cpp\gen</Filter>
-    </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\placeholder_texture2d.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
@@ -1603,6 +1897,9 @@
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\placeholder_texture3d.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\placeholder_texture_layered.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\plane_mesh.cpp">
@@ -1614,13 +1911,13 @@
     <ClCompile Include="godot-cpp\gen\src\classes\point_mesh.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\polygon2d.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\polygon_occluder3d.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\polygon_path_finder.cpp">
-      <Filter>godot-cpp\gen</Filter>
-    </ClCompile>
-    <ClCompile Include="godot-cpp\gen\src\classes\polygon2d.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\popup.cpp">
@@ -1671,10 +1968,19 @@
     <ClCompile Include="godot-cpp\gen\src\classes\ray_cast3d.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\rd_acceleration_structure_geometry.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\rd_acceleration_structure_instance.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\rd_attachment_format.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\rd_framebuffer_pass.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\rd_hit_group.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\rd_pipeline_color_blend_state.cpp">
@@ -1690,6 +1996,9 @@
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\rd_pipeline_rasterization_state.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\rd_pipeline_shader.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\rd_pipeline_specialization_constant.cpp">
@@ -1722,13 +2031,13 @@
     <ClCompile Include="godot-cpp\gen\src\classes\rectangle_shape2d.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
-    <ClCompile Include="godot-cpp\gen\src\classes\ref_counted.cpp">
-      <Filter>godot-cpp\gen</Filter>
-    </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\reference_rect.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\reflection_probe.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\ref_counted.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\reg_ex.cpp">
@@ -1741,6 +2050,12 @@
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\remote_transform3d.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\rendering_device.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\rendering_server.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\render_data.cpp">
@@ -1771,12 +2086,6 @@
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\render_scene_data_rd.cpp">
-      <Filter>godot-cpp\gen</Filter>
-    </ClCompile>
-    <ClCompile Include="godot-cpp\gen\src\classes\rendering_device.cpp">
-      <Filter>godot-cpp\gen</Filter>
-    </ClCompile>
-    <ClCompile Include="godot-cpp\gen\src\classes\rendering_server.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\resource.cpp">
@@ -1827,6 +2136,9 @@
     <ClCompile Include="godot-cpp\gen\src\classes\resource_importer_shader_file.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\resource_importer_svg.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\resource_importer_texture.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
@@ -1846,6 +2158,9 @@
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\resource_uid.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\retarget_modifier3d.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\ribbon_trail_mesh.cpp">
@@ -1882,6 +2197,9 @@
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\script.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\script_backtrace.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\script_create_dialog.cpp">
@@ -1932,13 +2250,10 @@
     <ClCompile Include="godot-cpp\gen\src\classes\shader_include.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\shader_include_db.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\shader_material.cpp">
-      <Filter>godot-cpp\gen</Filter>
-    </ClCompile>
-    <ClCompile Include="godot-cpp\gen\src\classes\shape_cast2d.cpp">
-      <Filter>godot-cpp\gen</Filter>
-    </ClCompile>
-    <ClCompile Include="godot-cpp\gen\src\classes\shape_cast3d.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\shape2d.cpp">
@@ -1947,16 +2262,31 @@
     <ClCompile Include="godot-cpp\gen\src\classes\shape3d.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\shape_cast2d.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\shape_cast3d.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\shortcut.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\skeleton2d.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\skeleton3d.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\skeleton_ik3d.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
-    <ClCompile Include="godot-cpp\gen\src\classes\skeleton_modification_stack2d.cpp">
+    <ClCompile Include="godot-cpp\gen\src\classes\skeleton_modification2d.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
-    <ClCompile Include="godot-cpp\gen\src\classes\skeleton_modification2d.cpp">
+    <ClCompile Include="godot-cpp\gen\src\classes\skeleton_modification2dccdik.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\skeleton_modification2dfabrik.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\skeleton_modification2d_jiggle.cpp">
@@ -1974,10 +2304,7 @@
     <ClCompile Include="godot-cpp\gen\src\classes\skeleton_modification2d_two_bone_ik.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
-    <ClCompile Include="godot-cpp\gen\src\classes\skeleton_modification2dccdik.cpp">
-      <Filter>godot-cpp\gen</Filter>
-    </ClCompile>
-    <ClCompile Include="godot-cpp\gen\src\classes\skeleton_modification2dfabrik.cpp">
+    <ClCompile Include="godot-cpp\gen\src\classes\skeleton_modification_stack2d.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\skeleton_modifier3d.cpp">
@@ -1987,12 +2314,6 @@
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\skeleton_profile_humanoid.cpp">
-      <Filter>godot-cpp\gen</Filter>
-    </ClCompile>
-    <ClCompile Include="godot-cpp\gen\src\classes\skeleton2d.cpp">
-      <Filter>godot-cpp\gen</Filter>
-    </ClCompile>
-    <ClCompile Include="godot-cpp\gen\src\classes\skeleton3d.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\skin.cpp">
@@ -2010,6 +2331,9 @@
     <ClCompile Include="godot-cpp\gen\src\classes\slider_joint3d.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\socket_server.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\soft_body3d.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
@@ -2025,6 +2349,9 @@
     <ClCompile Include="godot-cpp\gen\src\classes\spin_box.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\spline_ik3d.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\split_container.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
@@ -2034,16 +2361,31 @@
     <ClCompile Include="godot-cpp\gen\src\classes\spring_arm3d.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
-    <ClCompile Include="godot-cpp\gen\src\classes\sprite_base3d.cpp">
+    <ClCompile Include="godot-cpp\gen\src\classes\spring_bone_collision3d.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
-    <ClCompile Include="godot-cpp\gen\src\classes\sprite_frames.cpp">
+    <ClCompile Include="godot-cpp\gen\src\classes\spring_bone_collision_capsule3d.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\spring_bone_collision_plane3d.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\spring_bone_collision_sphere3d.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\spring_bone_simulator3d.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\sprite2d.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\sprite3d.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\sprite_base3d.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\sprite_frames.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\standard_material3d.cpp">
@@ -2070,10 +2412,16 @@
     <ClCompile Include="godot-cpp\gen\src\classes\stream_peer_gzip.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\stream_peer_socket.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\stream_peer_tcp.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\stream_peer_tls.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\stream_peer_uds.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\style_box.cpp">
@@ -2089,6 +2437,9 @@
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\style_box_texture.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\subtween_tweener.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\sub_viewport.cpp">
@@ -2113,6 +2464,48 @@
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\tcp_server.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\texture.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\texture2d.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\texture2drd.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\texture2d_array.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\texture2d_array_rd.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\texture3d.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\texture3drd.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\texture_button.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\texture_cubemap_array_rd.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\texture_cubemap_rd.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\texture_layered.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\texture_layered_rd.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\texture_progress_bar.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\texture_rect.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\text_edit.cpp">
@@ -2140,48 +2533,6 @@
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\text_server_manager.cpp">
-      <Filter>godot-cpp\gen</Filter>
-    </ClCompile>
-    <ClCompile Include="godot-cpp\gen\src\classes\texture.cpp">
-      <Filter>godot-cpp\gen</Filter>
-    </ClCompile>
-    <ClCompile Include="godot-cpp\gen\src\classes\texture_button.cpp">
-      <Filter>godot-cpp\gen</Filter>
-    </ClCompile>
-    <ClCompile Include="godot-cpp\gen\src\classes\texture_cubemap_array_rd.cpp">
-      <Filter>godot-cpp\gen</Filter>
-    </ClCompile>
-    <ClCompile Include="godot-cpp\gen\src\classes\texture_cubemap_rd.cpp">
-      <Filter>godot-cpp\gen</Filter>
-    </ClCompile>
-    <ClCompile Include="godot-cpp\gen\src\classes\texture_layered.cpp">
-      <Filter>godot-cpp\gen</Filter>
-    </ClCompile>
-    <ClCompile Include="godot-cpp\gen\src\classes\texture_layered_rd.cpp">
-      <Filter>godot-cpp\gen</Filter>
-    </ClCompile>
-    <ClCompile Include="godot-cpp\gen\src\classes\texture_progress_bar.cpp">
-      <Filter>godot-cpp\gen</Filter>
-    </ClCompile>
-    <ClCompile Include="godot-cpp\gen\src\classes\texture_rect.cpp">
-      <Filter>godot-cpp\gen</Filter>
-    </ClCompile>
-    <ClCompile Include="godot-cpp\gen\src\classes\texture2d.cpp">
-      <Filter>godot-cpp\gen</Filter>
-    </ClCompile>
-    <ClCompile Include="godot-cpp\gen\src\classes\texture2d_array.cpp">
-      <Filter>godot-cpp\gen</Filter>
-    </ClCompile>
-    <ClCompile Include="godot-cpp\gen\src\classes\texture2d_array_rd.cpp">
-      <Filter>godot-cpp\gen</Filter>
-    </ClCompile>
-    <ClCompile Include="godot-cpp\gen\src\classes\texture2drd.cpp">
-      <Filter>godot-cpp\gen</Filter>
-    </ClCompile>
-    <ClCompile Include="godot-cpp\gen\src\classes\texture3d.cpp">
-      <Filter>godot-cpp\gen</Filter>
-    </ClCompile>
-    <ClCompile Include="godot-cpp\gen\src\classes\texture3drd.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\theme.cpp">
@@ -2235,6 +2586,9 @@
     <ClCompile Include="godot-cpp\gen\src\classes\translation.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\translation_domain.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\translation_server.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
@@ -2256,7 +2610,13 @@
     <ClCompile Include="godot-cpp\gen\src\classes\tweener.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\two_bone_ik3d.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\udp_server.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\uds_server.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\undo_redo.cpp">
@@ -2269,24 +2629,6 @@
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\upnp_device.cpp">
-      <Filter>godot-cpp\gen</Filter>
-    </ClCompile>
-    <ClCompile Include="godot-cpp\gen\src\classes\v_box_container.cpp">
-      <Filter>godot-cpp\gen</Filter>
-    </ClCompile>
-    <ClCompile Include="godot-cpp\gen\src\classes\v_flow_container.cpp">
-      <Filter>godot-cpp\gen</Filter>
-    </ClCompile>
-    <ClCompile Include="godot-cpp\gen\src\classes\v_scroll_bar.cpp">
-      <Filter>godot-cpp\gen</Filter>
-    </ClCompile>
-    <ClCompile Include="godot-cpp\gen\src\classes\v_separator.cpp">
-      <Filter>godot-cpp\gen</Filter>
-    </ClCompile>
-    <ClCompile Include="godot-cpp\gen\src\classes\v_slider.cpp">
-      <Filter>godot-cpp\gen</Filter>
-    </ClCompile>
-    <ClCompile Include="godot-cpp\gen\src\classes\v_split_container.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\vehicle_body3d.cpp">
@@ -2311,6 +2653,9 @@
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\viewport_texture.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\virtual_joystick.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\visible_on_screen_enabler2d.cpp">
@@ -2544,18 +2889,6 @@
     <ClCompile Include="godot-cpp\gen\src\classes\visual_shader_node_texture.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
-    <ClCompile Include="godot-cpp\gen\src\classes\visual_shader_node_texture_parameter.cpp">
-      <Filter>godot-cpp\gen</Filter>
-    </ClCompile>
-    <ClCompile Include="godot-cpp\gen\src\classes\visual_shader_node_texture_parameter_triplanar.cpp">
-      <Filter>godot-cpp\gen</Filter>
-    </ClCompile>
-    <ClCompile Include="godot-cpp\gen\src\classes\visual_shader_node_texture_sdf.cpp">
-      <Filter>godot-cpp\gen</Filter>
-    </ClCompile>
-    <ClCompile Include="godot-cpp\gen\src\classes\visual_shader_node_texture_sdf_normal.cpp">
-      <Filter>godot-cpp\gen</Filter>
-    </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\visual_shader_node_texture2d_array.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
@@ -2569,6 +2902,18 @@
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\visual_shader_node_texture3d_parameter.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\visual_shader_node_texture_parameter.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\visual_shader_node_texture_parameter_triplanar.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\visual_shader_node_texture_sdf.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\visual_shader_node_texture_sdf_normal.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\visual_shader_node_transform_compose.cpp">
@@ -2592,6 +2937,12 @@
     <ClCompile Include="godot-cpp\gen\src\classes\visual_shader_node_transform_vec_mult.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\visual_shader_node_uv_func.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\visual_shader_node_uv_polar_coord.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\visual_shader_node_u_int_constant.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
@@ -2602,12 +2953,6 @@
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\visual_shader_node_u_int_parameter.cpp">
-      <Filter>godot-cpp\gen</Filter>
-    </ClCompile>
-    <ClCompile Include="godot-cpp\gen\src\classes\visual_shader_node_uv_func.cpp">
-      <Filter>godot-cpp\gen</Filter>
-    </ClCompile>
-    <ClCompile Include="godot-cpp\gen\src\classes\visual_shader_node_uv_polar_coord.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\visual_shader_node_varying.cpp">
@@ -2670,6 +3015,24 @@
     <ClCompile Include="godot-cpp\gen\src\classes\voxel_gi_data.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\v_box_container.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\v_flow_container.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\v_scroll_bar.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\v_separator.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\v_slider.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\v_split_container.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\weak_ref.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
@@ -2703,6 +3066,12 @@
     <ClCompile Include="godot-cpp\gen\src\classes\worker_thread_pool.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\world2d.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\world3d.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\world_boundary_shape2d.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
@@ -2712,16 +3081,13 @@
     <ClCompile Include="godot-cpp\gen\src\classes\world_environment.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
-    <ClCompile Include="godot-cpp\gen\src\classes\world2d.cpp">
-      <Filter>godot-cpp\gen</Filter>
-    </ClCompile>
-    <ClCompile Include="godot-cpp\gen\src\classes\world3d.cpp">
-      <Filter>godot-cpp\gen</Filter>
-    </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\x509_certificate.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\xml_parser.cpp">
+      <Filter>godot-cpp\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\gen\src\classes\xrvrs.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\xr_anchor3d.cpp">
@@ -2736,10 +3102,10 @@
     <ClCompile Include="godot-cpp\gen\src\classes\xr_camera3d.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
-    <ClCompile Include="godot-cpp\gen\src\classes\xr_controller_tracker.cpp">
+    <ClCompile Include="godot-cpp\gen\src\classes\xr_controller3d.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
-    <ClCompile Include="godot-cpp\gen\src\classes\xr_controller3d.cpp">
+    <ClCompile Include="godot-cpp\gen\src\classes\xr_controller_tracker.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\xr_face_modifier3d.cpp">
@@ -2778,28 +3144,16 @@
     <ClCompile Include="godot-cpp\gen\src\classes\xr_tracker.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
-    <ClCompile Include="godot-cpp\gen\src\classes\xrvrs.cpp">
-      <Filter>godot-cpp\gen</Filter>
-    </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\zip_packer.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\classes\zip_reader.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
-    <ClCompile Include="godot-cpp\gen\src\classes\a_star_grid2d.cpp">
+    <ClCompile Include="godot-cpp\gen\src\gdextension_interface_loader.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
-    <ClCompile Include="godot-cpp\gen\src\classes\a_star2d.cpp">
-      <Filter>godot-cpp\gen</Filter>
-    </ClCompile>
-    <ClCompile Include="godot-cpp\gen\src\classes\a_star3d.cpp">
-      <Filter>godot-cpp\gen</Filter>
-    </ClCompile>
-    <ClCompile Include="godot-cpp\gen\src\classes\accept_dialog.cpp">
-      <Filter>godot-cpp\gen</Filter>
-    </ClCompile>
-    <ClCompile Include="godot-cpp\gen\src\classes\aes_context.cpp">
+    <ClCompile Include="godot-cpp\gen\src\variant\array.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
     <ClCompile Include="godot-cpp\gen\src\variant\callable.cpp">
@@ -2856,8 +3210,14 @@
     <ClCompile Include="godot-cpp\gen\src\variant\utility_functions.cpp">
       <Filter>godot-cpp\gen</Filter>
     </ClCompile>
-    <ClCompile Include="godot-cpp\gen\src\variant\array.cpp">
-      <Filter>godot-cpp\gen</Filter>
+    <ClCompile Include="godot-cpp\src\classes\editor_plugin_registration.cpp">
+      <Filter>godot-cpp\src</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\src\classes\low_level.cpp">
+      <Filter>godot-cpp\src</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\src\classes\wrapped.cpp">
+      <Filter>godot-cpp\src</Filter>
     </ClCompile>
     <ClCompile Include="godot-cpp\src\core\class_db.cpp">
       <Filter>godot-cpp\src</Filter>
@@ -2872,6 +3232,12 @@
       <Filter>godot-cpp\src</Filter>
     </ClCompile>
     <ClCompile Include="godot-cpp\src\core\object.cpp">
+      <Filter>godot-cpp\src</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\src\core\print_string.cpp">
+      <Filter>godot-cpp\src</Filter>
+    </ClCompile>
+    <ClCompile Include="godot-cpp\src\godot.cpp">
       <Filter>godot-cpp\src</Filter>
     </ClCompile>
     <ClCompile Include="godot-cpp\src\variant\aabb.cpp">
@@ -2919,6 +3285,9 @@
     <ClCompile Include="godot-cpp\src\variant\variant.cpp">
       <Filter>godot-cpp\src</Filter>
     </ClCompile>
+    <ClCompile Include="godot-cpp\src\variant\variant_internal.cpp">
+      <Filter>godot-cpp\src</Filter>
+    </ClCompile>
     <ClCompile Include="godot-cpp\src\variant\vector2.cpp">
       <Filter>godot-cpp\src</Filter>
     </ClCompile>
@@ -2935,18 +3304,6 @@
       <Filter>godot-cpp\src</Filter>
     </ClCompile>
     <ClCompile Include="godot-cpp\src\variant\vector4i.cpp">
-      <Filter>godot-cpp\src</Filter>
-    </ClCompile>
-    <ClCompile Include="godot-cpp\src\godot.cpp">
-      <Filter>godot-cpp\src</Filter>
-    </ClCompile>
-    <ClCompile Include="godot-cpp\src\classes\editor_plugin_registration.cpp">
-      <Filter>godot-cpp\src</Filter>
-    </ClCompile>
-    <ClCompile Include="godot-cpp\src\classes\low_level.cpp">
-      <Filter>godot-cpp\src</Filter>
-    </ClCompile>
-    <ClCompile Include="godot-cpp\src\classes\wrapped.cpp">
       <Filter>godot-cpp\src</Filter>
     </ClCompile>
   </ItemGroup>
