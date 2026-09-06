@@ -25,6 +25,7 @@ public:
 	void reset_parameters();
 
 	void set_position(Vector3 position);
+	Vector3 get_position() const;
 
 	void set_velocity(Vector3 velocity);
 
@@ -35,8 +36,12 @@ public:
 	void set_distance_focus_level(float distance_focus_level);
 
 	void set_direction_focus_level(float direction_focus_level);
+	Vector3 get_focus_point() const;
+	float get_distance_focus_level() const;
+	float get_direction_focus_level() const;
+	void set_doppler_multiplier(float doppler_multiplier);
 
-	CriAtomEx3dListenerHn get_handle() const { return this->handle; }
+	CriAtomEx3dListenerHn get_handle() const { return handle; }
 
 private:
 	CriAtomEx3dListenerHn handle = nullptr;

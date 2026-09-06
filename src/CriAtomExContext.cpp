@@ -15,11 +15,20 @@ CriAtomExContext* CriAtomExContext::get_singleton()
 
 void CriAtomExContext::_bind_methods()
 {
-	GDBIND_METHOD(CriAtomExContext, initialize, "config");
+	GDBIND_METHOD(CriAtomExContext, initialize, "acf_file", "config");
 	GDBIND_METHOD(CriAtomExContext, finalize);
+	GDBIND_METHOD(CriAtomExContext, get_is_initialized);
+	GDBIND_METHOD(CriAtomExContext, get_time_micro);
+	GDBIND_METHOD(CriAtomExContext, set_random_seed, "seed");
+	GDBIND_METHOD(CriAtomExContext, get_num_game_variables);
+	GDBIND_METHOD(CriAtomExContext, get_game_variable_info, "index");
+	GDBIND_METHOD(CriAtomExContext, get_game_variable_by_id, "game_variable_id");
+	GDBIND_METHOD(CriAtomExContext, get_game_variable_by_name, "game_variable_name");
+	GDBIND_METHOD(CriAtomExContext, set_game_variable_by_id, "game_variable_id", "value");
+	GDBIND_METHOD(CriAtomExContext, set_game_variable_by_name, "game_variable_name", "value");
 	GDBIND_METHOD(CriAtomExContext, attach_dspbus_setting, "setting_name");
 	GDBIND_METHOD(CriAtomExContext, detach_dspbus_setting);
-	GDBIND_METHOD(CriAtomExContext, apply_dspbus_snapshot, "snapshot_name");
+	GDBIND_METHOD(CriAtomExContext, apply_dspbus_snapshot, "snapshot_name", "duration");
 	GDBIND_METHOD(CriAtomExContext, get_applied_dspbus_snapshot_name);
 }
 
@@ -163,6 +172,64 @@ void CriAtomExContext::finalize()
 #endif
 
 	criAtomEx_SetUserAllocator(nullptr, nullptr, nullptr);
+}
+
+bool CriAtomExContext::get_is_initialized() const
+{
+	return this->is_initialized;
+}
+
+int64_t CriAtomExContext::get_time_micro() const
+{
+	return (int64_t)criAtomEx_GetTimeMicro();
+}
+
+void CriAtomExContext::set_random_seed(int64_t seed)
+{
+	criAtomEx_SetRandomSeed((CriUint32)seed);
+}
+
+int CriAtomExContext::get_num_game_variables() const
+{
+	return criAtomEx_GetNumGameVariables();
+}
+
+Dictionary CriAtomExContext::get_game_variable_info(int index) const
+{
+	if (index < 0 || index > UINT16_MAX) {
+		return Dictionary();
+	}
+	CriAtomExGameVariableInfo info;
+	if (criAtomEx_GetGameVariableInfo((CriUint16)index, &info) == CRI_FALSE) {
+		return Dictionary();
+	}
+	Dictionary result;
+	result["name"] = info.name ? String(info.name) : String();
+	result["id"] = (int64_t)info.id;
+	result["value"] = info.value;
+	return result;
+}
+
+float CriAtomExContext::get_game_variable_by_id(int64_t game_variable_id) const
+{
+	return criAtomEx_GetGameVariableById((CriAtomExGameVariableId)game_variable_id);
+}
+
+float CriAtomExContext::get_game_variable_by_name(String game_variable_name) const
+{
+	CharString name = game_variable_name.utf8();
+	return criAtomEx_GetGameVariableByName(name.get_data());
+}
+
+void CriAtomExContext::set_game_variable_by_id(int64_t game_variable_id, float value)
+{
+	criAtomEx_SetGameVariableById((CriAtomExGameVariableId)game_variable_id, value);
+}
+
+void CriAtomExContext::set_game_variable_by_name(String game_variable_name, float value)
+{
+	CharString name = game_variable_name.utf8();
+	criAtomEx_SetGameVariableByName(name.get_data(), value);
 }
 
 void CriAtomExContext::attach_dspbus_setting(String setting_name)

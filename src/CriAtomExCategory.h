@@ -25,6 +25,18 @@ public:
 	void set_volume(float volume);
 
 	float get_volume();
+	float get_total_volume();
+	void set_fade_in_time(int time_ms);
+	void set_fade_out_time(int time_ms);
+	void set_aisac_control_by_id(int64_t control_id, float value);
+	bool reset_all_aisac_controls();
+	void attach_aisac(String global_aisac_name);
+	void detach_aisac(String global_aisac_name);
+	void detach_all_aisacs();
+	int get_num_attached_aisacs();
+	float get_current_aisac_control_value(int64_t control_id);
+	int get_num_cue_playing_count();
+	void override_cue_limit(int num_limit);
 
 	void stop();
 

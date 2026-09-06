@@ -25,8 +25,11 @@ public:
 	int get_num_used_voices();
 	
 	int get_num_limit_voices();
+	void set_additional_identifier(int64_t identifier);
+	int64_t get_identifier() const;
+	void detach_dsp();
 
-	CriAtomExVoicePoolHn get_handle() const { return this->handle; }
+	CriAtomExVoicePoolHn get_handle() const { return handle; }
 
 private:
 	CriAtomExVoicePoolHn handle = nullptr;

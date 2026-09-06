@@ -72,7 +72,9 @@ env.Append(CPPPATH=[cri_headers_path])
 env.Append(LIBPATH=[cri_libs_path])
 env.Append(LIBS=[cri_libs_file])
 
-sources = Glob("src/*.cpp")
+objdir = os.path.join("build", env["platform"], env["target"], env["arch"], "src")
+env.VariantDir(objdir, "src", duplicate=False)
+sources = Glob(os.path.join(objdir, "*.cpp"))
 
 libfile = f"lib{libname}.{env['arch']}{env['SHLIBSUFFIX']}"
 
