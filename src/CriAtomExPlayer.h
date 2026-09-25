@@ -159,6 +159,7 @@ public:
 	CriAtomExPlayerHn get_handle() const { return handle; }
 
 private:
+	static void CRIAPI _playback_event_callback(void* obj, CriAtomExPlaybackEvent event, const CriAtomExPlaybackInfoDetail* info);
 	CriAtomExPlayerHn handle = nullptr;
 };
 

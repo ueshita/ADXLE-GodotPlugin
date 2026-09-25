@@ -32,11 +32,11 @@
 	ADD_PROPERTY(PropertyInfo(type, #property_name), "set_"#property_name, "is_"#property_name)
 
 #ifdef _MSC_VER
-#define GDBIND_SIGNAL(class_name, signal_name, ...) \
-	ClassDB::add_signal(#class_name, MethodInfo(#signal_name, __VA_ARGS__))
+#define GDBIND_SIGNAL(signal_name, ...) \
+	ClassDB::add_signal(get_class_static(), MethodInfo(signal_name, __VA_ARGS__))
 #else
-#define GDBIND_SIGNAL(class_name, signal_name, ...) \
-	ClassDB::add_signal(#class_name, MethodInfo(#signal_name, ##__VA_ARGS__))
+#define GDBIND_SIGNAL(signal_name, ...) \
+	ClassDB::add_signal(get_class_static(), MethodInfo(signal_name, ##__VA_ARGS__))
 #endif
 
 #define GDBIND_SIGNAL_ARG(arg_name, type) \

@@ -100,8 +100,9 @@ void CriAtomExPlayer::_bind_methods()
 	GDBIND_METHOD(CriAtomExPlayer, set_3d_source, "source");
 	GDBIND_METHOD(CriAtomExPlayer, set_3d_listener, "listener");
 
-	GDBIND_SIGNAL(CriAtomExPlayer, "sequence_event");
-	GDBIND_SIGNAL(CriAtomExPlayer, "beatsync");
+	GDBIND_SIGNAL("sequence_event", GDBIND_SIGNAL_ARG(info, Variant::DICTIONARY));
+	GDBIND_SIGNAL("beatsync", GDBIND_SIGNAL_ARG(info, Variant::DICTIONARY));
+	GDBIND_SIGNAL("finished", GDBIND_SIGNAL_ARG(playback_id, Variant::INT));
 }
 
 CriAtomExPlayer::CriAtomExPlayer()
@@ -150,6 +151,7 @@ Ref<CriAtomExPlayer> CriAtomExPlayer::create_player(Dictionary config)
 	
 	Ref<CriAtomExPlayer> player = memnew(CriAtomExPlayer);
 	player->handle = handle;
+	criAtomExPlayer_SetPlaybackEventCallback(handle, &CriAtomExPlayer::_playback_event_callback, player.ptr());
 	return player;
 }
 
@@ -166,6 +168,7 @@ void CriAtomExPlayer::stop_all_players_without_release_time()
 void CriAtomExPlayer::destroy()
 {
 	if (handle) {
+		// Wait for any server callback before detaching its pointer to this object.
 		criAtomExPlayer_Destroy(handle);
 		handle = nullptr;
 	}
@@ -222,6 +225,15 @@ uint32_t CriAtomExPlayer::prepare()
 		return CRIATOMEX_INVALID_PLAYBACK_ID;
 	}
 	return criAtomExPlayer_Prepare(handle);
+}
+
+void CRIAPI CriAtomExPlayer::_playback_event_callback(void* obj, CriAtomExPlaybackEvent event, const CriAtomExPlaybackInfoDetail* info)
+{
+	if (event == CRIATOMEX_PLAYBACK_EVENT_REMOVE) {
+		// Receivers that need the main thread must connect with CONNECT_DEFERRED.
+		auto player = static_cast<CriAtomExPlayer*>(obj);
+		player->emit_signal("finished", (int64_t)info->id);
+	}
 }
 
 void CriAtomExPlayer::stop()
