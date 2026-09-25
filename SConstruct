@@ -81,7 +81,13 @@ libfile = f"lib{libname}.{env['arch']}{env['SHLIBSUFFIX']}"
 # if env["platform"] == "macos" or env["platform"] == "ios":
 #     libfile = f"{libname}.framework/{env['platform']}/{libname}"
 
-if env["platform"] == "ios":
+if env["platform"] == "macos":
+    env.Append(LINKFLAGS=[
+        "-framework", "AudioToolbox",
+        "-framework", "AudioUnit",
+        "-framework", "CoreAudio",
+    ])
+elif env["platform"] == "ios":
     env.Append(LINKFLAGS=[
         "-framework", "Foundation",
         "-framework", "CoreServices",
